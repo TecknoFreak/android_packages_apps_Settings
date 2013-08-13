@@ -159,6 +159,13 @@
         android:title="@string/security_settings_title"
         android:id="@+id/security_settings" />
 
+    <!-- PowerMenu -->
+    <header
+        android:fragment="com.android.settings.PowermenuSettings"
+        android:title="@string/powermenu_title"
+        android:icon="@drawable/ic_powermenu_settings"
+        android:id="@+id/powermenu_settings" />
+		
     <!-- Language -->
     <header
         android:id="@+id/language_settings"

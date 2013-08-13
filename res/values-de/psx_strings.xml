@@ -157,5 +157,24 @@
 	<!-- Statusbar show battery percent -->
 	<string name="status_bar_show_battery_percent">Zeige Batterie in &#37;</string>
 	<string name="status_bar_show_battery_percent_summary">Zeigt den aktuellen Ladezustand in &#37; im Batteriesymbol</string>
+
+    <!-- Powermenu Options -->
+    <string name="powermenu_title">Auswahl Stromschalter</string>
+    <string name="powermenu_prefs_always">Immer</string>
+    <string name="powermenu_prefs_onlyunlocked">Nur wenn Entriegelt</string>
+    <string name="powermenu_prefs_never">Niemals</string>
+
+    <string name="powermenu_reboot_prefs_title">Neustart</string>
+    <string name="powermenu_reboot_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_shutdown_prefs_title">Ausschalten</string>
+    <string name="powermenu_shutdown_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_airplanemode_prefs_title">Flugzeugmodus</string>
+    <string name="powermenu_airplanemode_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_silentmode_prefs_title">Stumm-Modus</string>
+    <string name="powermenu_silentmode_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_userswitch_prefs_title">Benutzerauswahl</string>
+    <string name="powermenu_userswitch_prefs_summary">%1$s Sichtbar</string>
+    <string name="powermenu_screenshot_prefs_title">Screenshot</string>
+    <string name="powermenu_screenshot_prefs_summary">%1$s</string>	
 	
 </resources>
