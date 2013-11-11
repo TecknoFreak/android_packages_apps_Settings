@@ -16,7 +16,6 @@ limitations under the License.
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Automatic brightness customization -->
     <string name="auto_brightness_setup_title">Automatische Helligkeit</string>
-    <string name="auto_brightness_setup_title">Automatische Helligkeit</string>
     <string name="auto_brightness_adjustment_title">Helligkeits-Einstellung</string>
     <string name="auto_brightness_twilight_adjustment">An Dämmerung anpassen</string>
     <string name="light_sensor_current_value">Aktueller Sensorwert: <xliff:g id="light_level">%d</xliff:g> Lux</string>
