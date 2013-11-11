@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About phone screen, build date of ROM -->
+    <string name="build_date">PSX Build Datum</string>
+    <string name="build_date_default">2012-01-01-0000</string>
+    <!-- About device screen, Cpu info. -->
+    <string name="cpu_info">CPU</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">Speicher</string>
+
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="attention">Achtung</string>
+    <string name="enabled">Aktiv</string>
+    <string name="default_string">Default</string>
+
+    <!-- Settings main menu category heading. Rom (Launcher, Themes, System). [CHAR LIMIT=40] -->
+    <string name="header_category_rom_settings">Xtra Einstellungen</string>
+
+    <!-- Psx settings screens -->
+    <string name="interface_settings_title">Oberfläche</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbauswahl</string>
+    <string name="press_color_to_apply">Zur Übernahme Farbe unten anwählen</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+
+    <!-- Display settings screen, notification light settings -->
+    <string name="display_category_light_options_title">Farboptionen</string>
+    <string name="notification_light_general_title">Allgemein</string>
+    <string name="notification_light_applist_title">Anwendungen</string>
+    <string name="notification_light_phonelist_title">Telefon</string>
+    <string name="notification_light_use_custom">Benutzerangaben</string>
+    <string name="notification_light_missed_call_title">Verpasste Anrufe</string>
+    <string name="notification_light_voicemail_title">Anrufbeantworter</string>
+    <string name="notification_light_choose_app">Wähle Anwendung</string>
+    <string name="notification_light_add">Hinzu</string>
+
+    <!-- Notification light dialogs -->
+    <string name="edit_light_settings">Editiere Farbeinstellung</string>
+    <string name="pulse_speed_title">Dauer und Geschwindigkeit</string>
+    <string name="picker_arrow">→</string>
+    <string name="default_time">Normal</string>
+    <string name="custom_time">Benutzer</string>
+    <string name="dialog_test">Test</string>
+    <string name="dialog_delete_title">Löschen</string>
+    <string name="dialog_delete_message">Gewählten Eintrag löschen ?</string>
+    <string name="dialog_test_message">Bildschirm aus um LED zu testen oder Fenster schließen zum beenden</string>
+    <string name="dialog_test_button">Schließen</string>
+
+    <!-- Values for the notification light pulse spinners -->
+    <string name="pulse_length_always_on">Immer an</string>
+    <string name="pulse_length_very_short">Sehr Kurz</string>
+    <string name="pulse_length_short">Kurz</string>
+    <string name="pulse_length_normal">Normal</string>
+    <string name="pulse_length_long">Lang</string>
+    <string name="pulse_length_very_long">Sehr Lang</string>
+    <string name="pulse_speed_very_fast">Sehr Schnell</string>
+    <string name="pulse_speed_fast">Schnell</string>
+    <string name="pulse_speed_normal">Normal</string>
+    <string name="pulse_speed_slow">Langsam</string>
+    <string name="pulse_speed_very_slow">Sehr Langsam</string>
+
+    <!-- Battery light settings -->
+    <string name="battery_reset_title">Reset</string>
+    <string name="battery_light_title">Batterie LED</string>
+    <string name="battery_low_pulse_title">Blinken wenn Bat. schwach</string>
+    <string name="battery_light_list_title">Ladefarbe</string>
+    <string name="battery_light_low_color_title">Batterie niedrig</string>
+    <string name="battery_light_medium_color_title">Mittel geladen</string>
+    <string name="battery_light_full_color_title">Voll geladen</string>
+
+    <!-- kill app long press back -->
+    <string name="kill_app_longpress_back">Mit Zurück beenden</string>
+    <string name="kill_app_longpress_back_summary">Aktives Programm mit langem Druck auf Zurück beenden</string>
+
+    <!-- Status bar -->
+    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_style_title">Stil</string>
+    <string name="status_bar_general_title">Allgemein</string>
+
+    <!-- Status bar | Clock -->
+    <string name="status_bar_clock">Uhr und Datum</string>
+    <string name="status_bar_clock_title">Uhr und Datumsstil</string>
+    <string name="clock_title_enable">Ausrichtung</string>
+    <string name="clock_color_title">Farbe</string>
+    <string name="status_bar_clock_style_reset">Farbe zurücks.</string>
+    <string name="status_bar_show_clock_title">Zeige Uhr und Datum</string>
+    <string name="status_bar_am_pm_title">AM/PM</string>
+    <string name="status_bar_am_pm_info">24h Anzeige aktiv</string>
+    <string name="enable_clock_weekday">Wochentag</string>
+    <string name="enable_clock_weekday_summary">Wochentagskürzel vor der Zeit</string>
+    <string name="right_clock">Uhr rechts</string>
+    <string name="center_clock">Uhr mittig</string>
+    <string name="dont_show">Nicht zeigen</string>
+    <string name="clock_date_display">Datum</string>
+    <string name="clock_date_display_summary">Zeige Benutzerdatum vor der Zeit</string>
+    <string name="clock_date_style">Datumsstil</string>
+    <string name="clock_date_format">Datumsformat</string>
+    <string name="clock_date_string_edittext_title">Benötigt Datumsformat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Eingabe</string>
+    <string name="am_pm_clock_normal">Normale Zeichengröße</string>
+    <string name="am_pm_clock_small">Kleine Zeichengröße</string>
+    <string name="am_pm_clock_none">Nicht zeigen</string>
+    <string name="clock_date_display_none">Nicht zeigen</string>
+    <string name="clock_date_display_small">Kleine Zeichengröße</string>
+    <string name="clock_date_display_normal">Normale Zeichengröße</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Kleinbuchstaben</string>
+    <string name="clock_date_style_uppercase">Großbuchstaben</string>
+    <string name="clock_date_format_custom">Benutzer Java Format</string>
+    <string name="status_bar_clock_style_reset_message">Uhrfarbe zurücksetzen?</string>
+    <string name="status_bar_toggle_brightness">Helligkeitskontrolle</string>
+    <string name="status_bar_toggle_brightness_summary">Helligkeit durch streichen über Statusbalken anpassen</string>
+    <string name="status_bar_toggle_info">Autohelligkeit ist aktiv</string>
+
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">Weck Optionen</string>
+    <string name="pref_volume_wake_title">Lautstärke wecken</string>
+    <string name="pref_volume_wake_summary">Rauf o. Runter der Lautstärketaste weckt das Gerät</string>
+
+    <!-- Volume rocker music control -->
+    <string name="volbtn_music_controls_title">Muskikontrolle über Lautstärketaste</string>
+    <string name="volbtn_music_controls_summary">Wenn der Bildschirm aus ist, schaltet die Lautstärketaste die Tracks</string>
+
+    <!-- Sound settings -->
+    <string name="volume_adjust_sounds_enable_title">Ton bei Lautstärkeänderung</string>
+    <string name="volume_adjust_sounds_enable_summary">Spielt einen Ton wenn Lautstärke über Tasten geändert wird</string>
+    <string name="link_volume_ringtones">Verbinde Klingel &amp; Meldungslautstärke</string>
+    <string name="volume_ring_only_description">Klingelton</string>
+
+</resources>
