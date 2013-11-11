@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Automatic brightness customization -->
+    <string name="auto_brightness_setup_title">Automatische Helligkeit</string>
+    <string name="auto_brightness_setup_title">Automatische Helligkeit</string>
+    <string name="auto_brightness_adjustment_title">Helligkeits-Einstellung</string>
+    <string name="auto_brightness_twilight_adjustment">An Dämmerung anpassen</string>
+    <string name="light_sensor_current_value">Aktueller Sensorwert: <xliff:g id="light_level">%d</xliff:g> Lux</string>
+    <string name="auto_brightness_dialog_title">Helligkeitsstufen</string>
+    <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> Lux</string>
+    <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e Lux</string>
+    <string name="auto_brightness_adjust_button">Anpassen</string>
+    <string name="auto_brightness_close_button">Schließen</string>
+    <string name="auto_brightness_reset_button">Zurücksetzen</string>
+    <string name="auto_brightness_split_dialog_title">Helligkeitsstufe aufteilen</string>
+    <string name="auto_brightness_level_dialog_title">Helligkeitsstufe</string>
+    <string name="auto_brightness_lux">Umgebungshelligkeit (lux)</string>
+    <string name="auto_brightness_backlight">Bildschirmhelligkeit (%)</string>
+    <string name="auto_brightness_reset_dialog_title">Helligkeitsstufen zurücksetzen?</string>
+    <string name="auto_brightness_reset_confirmation">Alle Helligkeitsstufen werden auf ihre Standardwerte zurückgesetzt.</string>
+    <string name="auto_brightness_split_lux_format">Teilungsposition (zwischen <xliff:g id="min">%1$d</xliff:g> und <xliff:g id="max">%2$d</xliff:g> Lux)</string>
+    <string name="auto_brightness_level_options">Aktionen</string>
+    <string name="auto_brightness_menu_edit">Bearbeiten</string>
+    <string name="auto_brightness_menu_split">Aufteilen</string>
+    <string name="auto_brightness_menu_remove">Entfernen</string>
+    <string name="auto_brightness_preview">Vorschau</string>
+    <string name="auto_brightness_preview_dialog_title">Helligkeitsverlaufs-Vorschau</string>
+    <string name="auto_brightness_help_dialog_title">Hilfe</string>
+    <string name="auto_brightness_help_text"><b>Wie wird die Helligkeit berechnet?</b>
+\n\n
+Der Verlauf der Helligkeit wird durch eine <i>kubische Interpolation</i> anhand der
+gegebenen Anzahl an <i>Stützstellen</i> berechnet - anders als gemeinhin angenommen, wird
+einem bestimmten Umgebungshelligkeitsbereich nicht eine konstante Bildschirmhelligkeit
+zugeordnet. Durch diese Art der Berechnung verursachen kleine Änderungen der Umgebungshelligkeit
+keine großen Sprünge der Bildschirmhelligkeit.\n
+Da die Abschätzung des exakten Verlaufs allerdings nicht ganz einfach ist, kann der berechnete
+Verlauf im Vorschaufenster betrachtet werden. Die Vorschau zeigt den Verlauf mit <i>logarithmischer</i>
+Skalierung, so dass alle Stützstellen unterscheidbar sind. Bei Verwendung einer linearen Skalierung
+wären die tendenziell wichtigeren Stützstellen im unteren Bereich der Umgebungshelligkeit nicht
+zu unterscheiden.
+\n\n
+<b>Wie kann der Helligkeitsverlauf verändert werden?</b>
+\n\n
+Jede Zeile in der Helligkeitsliste entspricht einer <i>Stützstelle</i> des Helligkeitsverlaufs.
+Der Bildschirmhelligkeitswert der Stützstelle kann mittels des Schiebereglers in der Zeile
+verändert werden. Während des Schiebens wird die momentane Bildschirmhelligkeit auf den gewählten
+Wert eingestellt, um die gewählte Helligkeit abschätzen zu können.\n
+Durch langes Drücken auf die Zeilen stehen weitere Optionen zur Verfügung. Durch Auswahl von
+\"Bearbeiten\" können sowohl der Umgebungshelligkeitswert der Stützstelle verändert als auch der
+Bildschirmhelligkeitswert manuell eingegeben werden. Die Auswahl von \"Helligkeitsstufe aufteilen\"
+erlaubt die Duplizierung einer Zeile in eine zweite Zeile, um zusätzliche Stützstellen hinzuzufügen.
+Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverlauf entfernt werden.
+    </string>
+    <string name="auto_brightness_sensitivity_title">Regelungsträgheit</string>
+    <string name="auto_brightness_sensitivity_verylow">Sehr träge</string>
+    <string name="auto_brightness_sensitivity_low">Träge</string>
+    <string name="auto_brightness_sensitivity_medium">Normal</string>
+    <string name="auto_brightness_sensitivity_high">Flink</string>
+    <string name="auto_brightness_sensitivity_veryhigh">Sehr flink</string>
+</resources>
