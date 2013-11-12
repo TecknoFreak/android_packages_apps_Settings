@@ -63,10 +63,10 @@
 
     <!-- Interface -->
     <header
-        android:id="@+id/interface_settings"
+        android:id="@+id/status_bar"
         android:icon="@drawable/ic_settings_interface"
-        android:fragment="com.android.settings.slim.InterfaceSettings"
-        android:title="@string/interface_settings_title" />
+        android:fragment="com.android.settings.slim.StatusBar"
+        android:title="@string/status_bar_title" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
