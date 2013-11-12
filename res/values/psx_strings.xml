@@ -154,4 +154,7 @@
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
 
+	<!-- Statusbar show battery percent -->
+	<string name="status_bar_show_battery_percent">Show battery percent</string>
+	<string name="status_bar_show_battery_percent_summary">Shows the battery state in percent inside of the battery symbol</string>
 </resources>
