@@ -68,6 +68,12 @@
         android:fragment="com.android.settings.slim.StatusBar"
         android:title="@string/status_bar_title" />
 
+    <header
+        android:id="@+id/user_interface"
+        android:icon="@drawable/ic_settings_interface"
+        android:fragment="com.android.settings.psx.UserInterfaceSettings"
+        android:title="@string/user_interface_category_title" />
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
