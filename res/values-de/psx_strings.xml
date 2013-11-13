@@ -158,6 +158,28 @@
 	<string name="status_bar_show_battery_percent">Zeige Batterie in &#37;</string>
 	<string name="status_bar_show_battery_percent_summary">Zeigt den aktuellen Ladezustand in &#37; im Batteriesymbol</string>
 
+    <!--  User Interface -->
+    <string name="user_interface_category_title">Xtra Oberfläche</string>
+
+    <!-- Category title for Charging sounds (Power state change) specific Settings.
+         [CHAR LIMIT=40] -->
+    <string name="power_notifications_category_title">Meldung wenn geladen</string>
+
+    <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
+    <string name="power_notifications_enable_title">Aktiv</string>
+    <string name="power_notifications_enable_summary">Ton spielen/Vibrieren, wenn Ladegerät ein- oder ausgesteckt</string>
+
+    <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
+    <string name="power_notifications_vibrate_title">Vibrieren</string>
+    <!-- Sound settings, Charging sounds ringtone selection, preference label -->
+    <string name="power_notifications_ringtone_title">Ton abspielen</string>
+    <!-- Sound settings, charging sounds label for ringtone == none -->
+    <string name="power_notifications_ringtone_silent">Ruhig</string>
+
+    <!-- Turn on display when power connected; turn off display when power disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">Aufwachen beim Anstecken</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Bildschrim ein, wenn Ladegerät ein- oder ausgesteckt</string>
+	
     <!-- Powermenu Options -->
     <string name="powermenu_title">Auswahl Stromschalter</string>
     <string name="powermenu_prefs_always">Immer</string>
