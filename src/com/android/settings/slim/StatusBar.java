@@ -41,11 +41,9 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
-	private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
     private PreferenceScreen mClockStyle;
     private CheckBoxPreference mStatusBarBrightnessControl;
-    private CheckBoxPreference mStatusBarShowBatteryPercent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,12 +69,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                             Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0) == 1));
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
 
-        mStatusBarShowBatteryPercent =
-            (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
-        mStatusBarShowBatteryPercent.setChecked((Settings.System.getInt(getContentResolver(),
-                            "status_bar_show_battery_percent", 0) == 1));
-        mStatusBarShowBatteryPercent.setOnPreferenceChangeListener(this);
-
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -85,12 +77,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                     (Boolean) newValue ? 1 : 0);
             return true;
-        } else if (preference == mStatusBarShowBatteryPercent) {
-            Settings.System.putInt(getContentResolver(),
-                    "status_bar_show_battery_percent",
-                    (Boolean) newValue ? 1 : 0);
-			return true;
-		}
+        }
         return false;
     }
 

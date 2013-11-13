@@ -145,7 +145,7 @@
     <string name="keyboard_rotation_toggle_summary">Force auto-rotate when keyboard is shown</string>
     <string name="keyboard_rotation_timeout_title">Auto-rotate timeout</string>
     <string name="keyboard_rotation_timeout_summary">Disables auto-rotate sensor <xliff:g id="rotate_timeout">%1$s</xliff:g> seconds after keyboard is hidden</string>
-    <string name="keyboard_rotation_dialog">This feature forces auto-rotate to turn on temporarily while the keyboard is shown.  It has no effect when auto-rotate is already enabled.</string>
+    <string name="keyboard_rotation_dialog">This feature forces auto-rotate to turn on temporarily while the keyboard is shown. It has no effect when auto-rotate is already enabled.</string>
     <string name="show_enter_key_title">Show enter key</string>
     <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
     <string name="ime_switcher_notify">Selector notification</string>
@@ -154,15 +154,11 @@
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
 
-	<!-- Statusbar show battery percent -->
-	<string name="status_bar_show_battery_percent">Show battery percent</string>
-	<string name="status_bar_show_battery_percent_summary">Shows the battery state in percent inside of the battery symbol</string>
-
-    <!--  User Interface -->
+    <!-- User Interface -->
     <string name="user_interface_category_title">Xtra interface</string>
 
     <!-- Category title for Charging sounds (Power state change) specific Settings.
-         [CHAR LIMIT=40] -->
+[CHAR LIMIT=40] -->
     <string name="power_notifications_category_title">Plug-in prompt</string>
 
     <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
@@ -179,8 +175,8 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting the charger</string>
-	
-	<!-- Powermenu Options -->
+        
+        <!-- Powermenu Options -->
     <string name="powermenu_title">Power menu</string>
     <string name="powermenu_prefs_always">Always visible</string>
     <string name="powermenu_prefs_onlyunlocked">Only visible while unlocked</string>
@@ -200,5 +196,25 @@
     <string name="powermenu_screenshot_prefs_summary">%1$s</string>
     <string name="powermenu_torch_prefs_title">Torch</string>
     <string name="powermenu_torch_prefs_summary">%1$s</string>
+
+    <!-- StatusBar Battery Settings -->
+    <string name="battery_icon_title">Battery icon</string>
+    <string name="battery_status_icon">Icon</string>
+    <string name="battery_status_percentage">Percentage</string>
+    <string name="battery_status_icon_percentage">Icon with percentage</string>
+    <string name="battery_status_circle">Circle</string>
+    <string name="battery_status_circle_percentage">Circle with percentage</string>
+    <string name="battery_status_dotted_circle_percentage">Dotted Circle with percentage</string>
+    <string name="battery_status_dotted_circle">Dotted Circle</string>
+    <string name="battery_color_title">Battery color</string>
+    <string name="circle_battery_animation_speed">Circle animation speed</string>
+    <string name="circle_battery_animation_speed_none">None</string>
+    <string name="circle_battery_animation_speed_slow">Slow</string>
+    <string name="circle_battery_animation_speed_stock">Normal</string>
+    <string name="circle_battery_animation_speed_fast">Fast</string>
+    <string name="battery_text_color">Percentage text color</string>
+    <string name="battery_bolt_color">Bolt charging color</string>
+    <string name="battery_text_charging_color">Percentage text charging color</string>
+    <string name="battery_style_reset_message">Reset all battery colors?</string>
 
 </resources>

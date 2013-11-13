@@ -154,10 +154,6 @@
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Batterie um Entriegelungsring</string>
 
-	<!-- Statusbar show battery percent -->
-	<string name="status_bar_show_battery_percent">Zeige Batterie in &#37;</string>
-	<string name="status_bar_show_battery_percent_summary">Zeigt den aktuellen Ladezustand in &#37; im Batteriesymbol</string>
-
     <!--  User Interface -->
     <string name="user_interface_category_title">Xtra Oberfläche</string>
 
@@ -202,3 +198,4 @@
     <string name="powermenu_torch_prefs_summary">%1$s</string>
 	
 </resources>
+
