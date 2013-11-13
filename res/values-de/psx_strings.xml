@@ -134,28 +134,4 @@
     <string name="link_volume_ringtones">Verbinde Klingel &amp; Meldungslautstärke</string>
     <string name="volume_ring_only_description">Klingelton</string>
 
-    <!-- Keyboard and Input ASS methods -->
-    <string name="title_keyboard_input">Erweiterte Optionen</string>
-    <string name="disable_fullscreen_keyboard_title">Vollbild Tastatur deaktivieren</string>
-    <string name="disable_fullscreen_keyboard_summary">Querformatstastatur nimmt nicht den gesamten Bildschirm ein</string>
-    <string name="volume_key_cursor_control_title">Position über Lautstärketasten</string>
-    <string name="volume_key_cursor_control_on">Lautst. Rauf/Runter = Links/Rechts</string>
-    <string name="volume_key_cursor_control_on_reverse">Lautst. Rauf/Runter = Rechts/Links</string>
-    <string name="keyboard_rotation_toggle_title">Autom. Tastatur Rotation</string>
-    <string name="keyboard_rotation_toggle_summary">Erzwinge Autorotation wenn Tastatur aktiv</string>
-    <string name="keyboard_rotation_timeout_title">Autorotations Timeout</string>
-    <string name="keyboard_rotation_timeout_summary">Deaktv. Autorotation <xliff:g id="rotate_timeout">%1$s</xliff:g> Sekunden nach Tastatur aus</string>
-    <string name="keyboard_rotation_dialog">Diese Option erzwingt die temporäre Aktivierung der Autorotation während die Tastatur sichtbar ist, hat keinen Einfluss auf eine bereits aktive Autorotation</string>
-    <string name="show_enter_key_title">Zeige Enter Taste</string>
-    <string name="show_enter_key_summary">Erzwinge Enter Taste anstatt EmoIcon Taste</string>
-    <string name="ime_switcher_notify">Auswahl Benachrichtigung</string>
-    <string name="ime_switcher_notify_summary">Zeigt die Eingabenmethodenauswahl in der Benachrichtigungszeile</string>
-
-    <!-- Lockscreen battery ring -->
-    <string name="battery_around_lockscreen_ring">Batterie um Entriegelungsring</string>
-
-	<!-- Statusbar show battery percent -->
-	<string name="status_bar_show_battery_percent">Zeige Batterie in &#37;</string>
-	<string name="status_bar_show_battery_percent_summary">Zeigt den aktuellen Ladezustand in &#37; im Batteriesymbol</string>
-	
 </resources>
