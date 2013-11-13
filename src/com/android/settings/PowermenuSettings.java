@@ -40,6 +40,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
     private static final String KEY_POWERMENU_SILENTMODE_PREFS ="powermenu_silentmode_prefs";
     private static final String KEY_POWERMENU_USERSWITCH_PREFS ="powermenu_userswitch_prefs";
     private static final String KEY_POWERMENU_SCREENSHOT_PREFS ="powermenu_screenshot_prefs";
+    private static final String KEY_POWERMENU_TORCH_PREFS ="powermenu_torch_prefs";
 
     private ListPreference mPowermenuRebootPrefs;
     private ListPreference mPowermenuShutdownPrefs;
@@ -47,6 +48,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
     private ListPreference mPowermenuSilentmodePrefs;
     private ListPreference mPowermenuUserswitchPrefs;
     private ListPreference mPowermenuScreenshotPrefs;
+    private ListPreference mPowermenuTorchPrefs;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,14 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
         mPowermenuAirplanemodePrefs.setValue(String.valueOf(mPowermenuAirplanemodePrefsValue));
         updatePowermenuAirplanemodePrefs(mPowermenuAirplanemodePrefsValue);
 
+        // Powermenu Torch selection
+        mPowermenuTorchPrefs = (ListPreference) prefSet.findPreference(KEY_POWERMENU_TORCH_PREFS);
+        mPowermenuTorchPrefs.setOnPreferenceChangeListener(this);
+        int mPowermenuTorchPrefsValue = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                                 Settings.System.POWERMENU_TORCH_PREFS, 2);
+        mPowermenuTorchPrefs.setValue(String.valueOf(mPowermenuTorchPrefsValue));
+        updatePowermenuTorchPrefs(mPowermenuTorchPrefsValue);
+		
         // Powermenu Silentmode selection
         mPowermenuSilentmodePrefs = (ListPreference) prefSet.findPreference(KEY_POWERMENU_SILENTMODE_PREFS);
         mPowermenuSilentmodePrefs.setOnPreferenceChangeListener(this);
@@ -144,6 +154,10 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
     private void updatePowermenuScreenshotPrefs(int value) {
         mPowermenuScreenshotPrefs.setSummary(getPowerMenuString(value));
     }
+
+    private void updatePowermenuTorchPrefs(int value) {
+        mPowermenuTorchPrefs.setSummary(getPowerMenuString(value));
+    }
     
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mPowermenuRebootPrefs) {
@@ -187,7 +201,14 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
             updatePowermenuScreenshotPrefs(mPowermenuScreenshotPrefsValue);
             getActivity().recreate();
             return true;
-            }
+        } else if (preference == mPowermenuTorchPrefs) {
+            int mPowermenuTorchPrefsValue = Integer.valueOf((String) objValue);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.POWERMENU_TORCH_PREFS, mPowermenuTorchPrefsValue);
+            updatePowermenuTorchPrefs(mPowermenuTorchPrefsValue);
+            getActivity().recreate();
+            return true;
+        }
         return false;
     }
 }
