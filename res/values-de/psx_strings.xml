@@ -134,4 +134,66 @@
     <string name="link_volume_ringtones">Verbinde Klingel &amp; Meldungslautstärke</string>
     <string name="volume_ring_only_description">Klingelton</string>
 
+    <!-- Keyboard and Input ASS methods -->
+    <string name="title_keyboard_input">Erweiterte Optionen</string>
+    <string name="disable_fullscreen_keyboard_title">Vollbild Tastatur deaktivieren</string>
+    <string name="disable_fullscreen_keyboard_summary">Querformatstastatur nimmt nicht den gesamten Bildschirm ein</string>
+    <string name="volume_key_cursor_control_title">Position über Lautstärketasten</string>
+    <string name="volume_key_cursor_control_on">Lautst. Rauf/Runter = Links/Rechts</string>
+    <string name="volume_key_cursor_control_on_reverse">Lautst. Rauf/Runter = Rechts/Links</string>
+    <string name="keyboard_rotation_toggle_title">Autom. Tastatur Rotation</string>
+    <string name="keyboard_rotation_toggle_summary">Erzwinge Autorotation wenn Tastatur aktiv</string>
+    <string name="keyboard_rotation_timeout_title">Autorotations Timeout</string>
+    <string name="keyboard_rotation_timeout_summary">Deaktv. Autorotation <xliff:g id="rotate_timeout">%1$s</xliff:g> Sekunden nach Tastatur aus</string>
+    <string name="keyboard_rotation_dialog">Diese Option erzwingt die temporäre Aktivierung der Autorotation während die Tastatur sichtbar ist, hat keinen Einfluss auf eine bereits aktive Autorotation</string>
+    <string name="show_enter_key_title">Zeige Enter Taste</string>
+    <string name="show_enter_key_summary">Erzwinge Enter Taste anstatt EmoIcon Taste</string>
+    <string name="ime_switcher_notify">Auswahl Benachrichtigung</string>
+    <string name="ime_switcher_notify_summary">Zeigt die Eingabenmethodenauswahl in der Benachrichtigungszeile</string>
+
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Batterie um Entriegelungsring</string>
+
+    <!--  User Interface -->
+    <string name="user_interface_category_title">Xtra Oberfläche</string>
+
+    <!-- Category title for Charging sounds (Power state change) specific Settings.
+         [CHAR LIMIT=40] -->
+    <string name="power_notifications_category_title">Meldung wenn geladen</string>
+
+    <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
+    <string name="power_notifications_enable_title">Aktiv</string>
+    <string name="power_notifications_enable_summary">Ton spielen/Vibrieren, wenn Ladegerät ein- oder ausgesteckt</string>
+
+    <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
+    <string name="power_notifications_vibrate_title">Vibrieren</string>
+    <!-- Sound settings, Charging sounds ringtone selection, preference label -->
+    <string name="power_notifications_ringtone_title">Ton abspielen</string>
+    <!-- Sound settings, charging sounds label for ringtone == none -->
+    <string name="power_notifications_ringtone_silent">Ruhig</string>
+
+    <!-- Turn on display when power connected; turn off display when power disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">Aufwachen beim Anstecken</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Bildschrim ein, wenn Ladegerät ein- oder ausgesteckt</string>
+	
+    <!-- Powermenu Options -->
+    <string name="powermenu_title">Auswahl Stromschalter</string>
+    <string name="powermenu_prefs_always">Immer</string>
+    <string name="powermenu_prefs_onlyunlocked">Nur wenn Entriegelt</string>
+    <string name="powermenu_prefs_never">Niemals</string>
+
+    <string name="powermenu_reboot_prefs_title">Neustart</string>
+    <string name="powermenu_reboot_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_shutdown_prefs_title">Ausschalten</string>
+    <string name="powermenu_shutdown_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_airplanemode_prefs_title">Flugzeugmodus</string>
+    <string name="powermenu_airplanemode_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_silentmode_prefs_title">Stumm-Modus</string>
+    <string name="powermenu_silentmode_prefs_summary">%1$s sichtbar</string>
+    <string name="powermenu_userswitch_prefs_title">Benutzerauswahl</string>
+    <string name="powermenu_userswitch_prefs_summary">%1$s Sichtbar</string>
+    <string name="powermenu_screenshot_prefs_title">Screenshot</string>
+    <string name="powermenu_screenshot_prefs_summary">%1$s</string>	
+	
 </resources>
+

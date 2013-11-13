@@ -74,6 +74,13 @@
         android:fragment="com.android.settings.psx.UserInterfaceSettings"
         android:title="@string/user_interface_category_title" />
 
+    <!-- PowerMenu -->
+    <header
+        android:fragment="com.android.settings.PowermenuSettings"
+        android:title="@string/powermenu_title"
+        android:icon="@drawable/ic_powermenu_settings"
+        android:id="@+id/powermenu_settings" />
+		
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
@@ -158,7 +165,7 @@
         android:icon="@drawable/ic_settings_security"
         android:title="@string/security_settings_title"
         android:id="@+id/security_settings" />
-
+	
     <!-- Language -->
     <header
         android:id="@+id/language_settings"

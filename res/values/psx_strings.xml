@@ -175,8 +175,13 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting the charger</string>
+<<<<<<< HEAD
         
         <!-- Powermenu Options -->
+=======
+	
+	<!-- Powermenu Options -->
+>>>>>>> f4b2e13acadf38f219c5e80a111bfc14a2c36088
     <string name="powermenu_title">Power menu</string>
     <string name="powermenu_prefs_always">Always visible</string>
     <string name="powermenu_prefs_onlyunlocked">Only visible while unlocked</string>
@@ -194,6 +199,7 @@
     <string name="powermenu_userswitch_prefs_summary">%1$s</string>
     <string name="powermenu_screenshot_prefs_title">Screenshot</string>
     <string name="powermenu_screenshot_prefs_summary">%1$s</string>
+<<<<<<< HEAD
 
     <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Battery icon</string>
@@ -214,5 +220,7 @@
     <string name="battery_bolt_color">Bolt charging color</string>
     <string name="battery_text_charging_color">Percentage text charging color</string>
     <string name="battery_style_reset_message">Reset all battery colors?</string>
+=======
+>>>>>>> f4b2e13acadf38f219c5e80a111bfc14a2c36088
 
 </resources>
