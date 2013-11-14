@@ -226,5 +226,20 @@
     <string name="system_power_crt_mode_vertical">Vertical kollabieren</string>
     <string name="system_power_crt_mode_both">Kollabiere Ausrichtungsgebunden</string>
     <string name="system_power_crt_mode_scale">Zusammenfallen</string>	
+    
+      <!-- Navigation Bar -->
+    <string name="navigation_bar_title">Navigationsleiste</string>
+
+    <!-- Navigation Bar Height -->
+    <string name="navigation_bar_height">Höhe der Navigationsleiste</string>
+    <string name="navigation_bar_height_48">48dp (default)</string>
+    <string name="navigation_bar_height_44">44dp</string>
+    <string name="navigation_bar_height_40">40dp</string>
+    <string name="navigation_bar_height_36">36dp</string>
+    <string name="navigation_bar_height_32">32dp</string>
+    <string name="navigation_bar_height_28">28dp</string>
+    <string name="navigation_bar_height_24">24dp</string>
+    <string name="navigation_bar_height_20">20dp</string>
+    <string name="navigation_bar_height_0">0dp (Versteckt)</string>
 </resources>
 
