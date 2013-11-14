@@ -81,6 +81,12 @@
         android:icon="@drawable/ic_powermenu_settings"
         android:id="@+id/powermenu_settings" />
 		
+    <header
+        android:id="@+id/navigation_bar"
+        android:icon="@drawable/ic_settings_interface"
+        android:fragment="com.android.settings.psx.NavigationBarSettings"
+        android:title="@string/navigation_bar_title" />
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
