@@ -196,6 +196,35 @@
     <string name="powermenu_screenshot_prefs_summary">%1$s</string>	
     <string name="powermenu_torch_prefs_title">Taschenlampe</string>
     <string name="powermenu_torch_prefs_summary">%1$s</string>
-	
+
+   <!-- StatusBar Battery Settings -->
+    <string name="battery_icon_title">Batterie Symbol</string>
+    <string name="battery_status_icon">Symbol</string>
+    <string name="battery_status_percentage">Prozent</string>
+    <string name="battery_status_icon_percentage">Symbol mit Prozent</string>
+    <string name="battery_status_circle">Kreis</string>
+    <string name="battery_status_circle_percentage">Kreis mit Prozent</string>
+    <string name="battery_status_dotted_circle_percentage">Gepunkteter Kreis mit Prozent</string>
+    <string name="battery_status_dotted_circle">Gepunkteter Kreis</string>
+    <string name="battery_color_title">Batterie Farbe</string>
+    <string name="circle_battery_animation_speed">Kreis Bewegungsgeschwindigkeit</string>
+    <string name="circle_battery_animation_speed_none">Keine</string>
+    <string name="circle_battery_animation_speed_slow">Langsam</string>
+    <string name="circle_battery_animation_speed_stock">Normal</string>
+    <string name="circle_battery_animation_speed_fast">Schnell</string>
+    <string name="battery_text_color">Prozent Textfarbe</string>
+    <string name="battery_bolt_color">Farbe Ladeblitz</string>
+    <string name="battery_text_charging_color">Farbe Prozent während des Ladens</string>
+    <string name="battery_style_reset_message">Alle Batteriefarben zurücksetzen?</string>
+
+    <!-- Display : Animation options -->
+    <string name="display_category_animation_options_title">Animations Optionen</string>
+    <string name="system_power_crt_mode_title">CRT Animation </string>
+    <string name="system_power_crt_mode_dialog_title">CRT Animation</string>
+    <string name="system_power_crt_mode_off">Keine zeigen</string>
+    <string name="system_power_crt_mode_horizontal">Horizontal kollabieren</string>
+    <string name="system_power_crt_mode_vertical">Vertical kollabieren</string>
+    <string name="system_power_crt_mode_both">Kollabiere Ausrichtungsgebunden</string>
+    <string name="system_power_crt_mode_scale">Zusammenfallen</string>	
 </resources>
 
