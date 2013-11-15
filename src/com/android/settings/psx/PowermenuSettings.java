@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.android.settings;
+package com.android.settings.psx;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,6 +28,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.os.SystemProperties;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -100,11 +101,18 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
 
         // Powermenu Userswitch selection
         mPowermenuUserswitchPrefs = (ListPreference) prefSet.findPreference(KEY_POWERMENU_USERSWITCH_PREFS);
-        mPowermenuUserswitchPrefs.setOnPreferenceChangeListener(this);
-        int mPowermenuUserswitchPrefsValue = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                                 Settings.System.POWERMENU_USERSWITCH_PREFS, 2);
-        mPowermenuUserswitchPrefs.setValue(String.valueOf(mPowermenuUserswitchPrefsValue));
-        updatePowermenuUserswitchPrefs(mPowermenuUserswitchPrefsValue);
+	    if (mPowermenuUserswitchPrefs !=null) {
+		    if (SystemProperties.getBoolean("fw.power_user_switcher", false)) {
+                mPowermenuUserswitchPrefs.setOnPreferenceChangeListener(this);
+                int mPowermenuUserswitchPrefsValue = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                                         Settings.System.POWERMENU_USERSWITCH_PREFS, 2);
+                mPowermenuUserswitchPrefs.setValue(String.valueOf(mPowermenuUserswitchPrefsValue));
+                updatePowermenuUserswitchPrefs(mPowermenuUserswitchPrefsValue);
+    		} else {
+	    	    prefSet.removePreference(mPowermenuUserswitchPrefs);
+		        mPowermenuUserswitchPrefs = null;
+            }
+		}
 
         // Powermenu Userswitch selection
         mPowermenuScreenshotPrefs = (ListPreference) prefSet.findPreference(KEY_POWERMENU_SCREENSHOT_PREFS);
@@ -148,7 +156,9 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
     }
 
     private void updatePowermenuUserswitchPrefs(int value) {
-        mPowermenuUserswitchPrefs.setSummary(getPowerMenuString(value));
+   	    if (mPowermenuUserswitchPrefs !=null) {
+            mPowermenuUserswitchPrefs.setSummary(getPowerMenuString(value));
+		}
     }
 
     private void updatePowermenuScreenshotPrefs(int value) {
@@ -166,6 +176,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
                     Settings.System.POWERMENU_REBOOT_PREFS, mPowermenuRebootPrefsValue);
             updatePowermenuRebootPrefs(mPowermenuRebootPrefsValue);
             getActivity().recreate();
+			return true;
         } else if (preference == mPowermenuShutdownPrefs) {
             int mPowermenuShutdownPrefsValue = Integer.valueOf((String) objValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
@@ -187,7 +198,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
             updatePowermenuSilentmodePrefs(mPowermenuSilentmodePrefsValue);
             getActivity().recreate();
             return true;
-        } else if (preference == mPowermenuUserswitchPrefs) {
+        } else if (mPowermenuUserswitchPrefs !=null && preference == mPowermenuUserswitchPrefs) {
             int mPowermenuUserswitchPrefsValue = Integer.valueOf((String) objValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.POWERMENU_USERSWITCH_PREFS, mPowermenuUserswitchPrefsValue);

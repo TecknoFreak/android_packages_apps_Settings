@@ -13,5 +13,10 @@
         android:defaultValue="48"
         android:persistent="false" />
 
+    <CheckBoxPreference
+        android:key="kill_app_longpress_back"
+        android:title="@string/kill_app_longpress_back"
+        android:summary="@string/kill_app_longpress_back_summary"/>
+		
 </PreferenceScreen>
 

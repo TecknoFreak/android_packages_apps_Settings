@@ -61,31 +61,26 @@
     <!-- Additional controls -->
     <header android:title="@string/header_category_rom_settings" />
 
-    <!-- Interface -->
+    <!-- Bars -->
     <header
-        android:id="@+id/status_bar"
+        android:id="@+id/psx_bars"
         android:icon="@drawable/ic_settings_interface"
-        android:fragment="com.android.settings.slim.StatusBar"
-        android:title="@string/status_bar_title" />
+        android:fragment="com.android.settings.psx.BarsSettings"
+        android:title="@string/psx_header_bars" />
 
+    <!-- Buttons -->
+    <header
+        android:id="@+id/psx_buttons"
+        android:icon="@drawable/ic_settings_interface"
+        android:fragment="com.android.settings.psx.ButtonsSettings"
+        android:title="@string/psx_header_buttons" />
+		
+    <!-- Interface -->
     <header
         android:id="@+id/user_interface"
         android:icon="@drawable/ic_settings_interface"
         android:fragment="com.android.settings.psx.UserInterfaceSettings"
-        android:title="@string/user_interface_category_title" />
-
-    <!-- PowerMenu -->
-    <header
-        android:fragment="com.android.settings.PowermenuSettings"
-        android:title="@string/powermenu_title"
-        android:icon="@drawable/ic_powermenu_settings"
-        android:id="@+id/powermenu_settings" />
-		
-    <header
-        android:id="@+id/navigation_bar"
-        android:icon="@drawable/ic_settings_interface"
-        android:fragment="com.android.settings.psx.NavigationBarSettings"
-        android:title="@string/navigation_bar_title" />
+        android:title="@string/psx_header_interface" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"

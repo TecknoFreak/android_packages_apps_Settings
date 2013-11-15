@@ -120,7 +120,6 @@
     <string name="status_bar_toggle_info">Automatic brightness is enabled</string>
 
     <!-- Wakeup options -->
-    <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
@@ -242,4 +241,17 @@
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
 
+	<!-- Settings Header -->
+	<string name="psx_header_bars">Bars</string>
+	<string name="psx_header_buttons">Buttons</string>
+	<string name="psx_header_interface">Interface</string>
+	<string name="psx_header_lockscreen">Lockscreen</string>
+	<string name="psx_header_statusbar">Statusbar</string>
+	<string name="psx_header_navigationbar">Navigationbar</string>
+	<string name="psx_header_powermenu">Power menu</string>
+	<string name="psx_header_advanced_keyboard_options">Advanced keyboard options</string>
+	<string name="psx_header_charging">Charging</string>
+    
+	<string name="psx_category_volume_rocker">Volume rocker</string>
+	
 </resources>
