@@ -82,6 +82,13 @@
         android:fragment="com.android.settings.psx.UserInterfaceSettings"
         android:title="@string/psx_header_interface" />
 
+    <!-- Lockscreen -->
+    <header
+        android:id="@+id/lockscreen"
+        android:icon="@drawable/ic_settings_interface"
+        android:fragment="com.android.settings.psx.LockscreenSettings"
+        android:title="@string/psx_header_lockscreen" />
+		
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />

@@ -157,7 +157,7 @@
     <string name="user_interface_category_title">Xtra interface</string>
 
     <!-- Category title for Charging sounds (Power state change) specific Settings.
-[CHAR LIMIT=40] -->
+        [CHAR LIMIT=40] -->
     <string name="power_notifications_category_title">Plug-in prompt</string>
 
     <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
@@ -175,7 +175,7 @@
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting the charger</string>
         
-        <!-- Powermenu Options -->
+   <!-- Powermenu Options -->
     <string name="powermenu_title">Power menu</string>
     <string name="powermenu_prefs_always">Always visible</string>
     <string name="powermenu_prefs_onlyunlocked">Only visible while unlocked</string>
@@ -252,6 +252,7 @@
 	<string name="psx_header_advanced_keyboard_options">Advanced keyboard options</string>
 	<string name="psx_header_charging">Charging</string>
     
+	<string name="psx_category_extended_input">Extended input</string>    
 	<string name="psx_category_volume_rocker">Volume rocker</string>
 	
 </resources>

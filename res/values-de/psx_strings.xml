@@ -80,7 +80,7 @@
     <string name="kill_app_longpress_back_summary">Aktives Programm mit langem Druck auf Zurück beenden</string>
 
     <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_title">Statusleiste</string>
     <string name="status_bar_style_title">Stil</string>
     <string name="status_bar_general_title">Allgemein</string>
 
@@ -120,7 +120,6 @@
     <string name="status_bar_toggle_info">Autohelligkeit ist aktiv</string>
 
     <!-- Wakeup options -->
-    <string name="display_category_wakeup_options_title">Weck Optionen</string>
     <string name="pref_volume_wake_title">Lautstärke wecken</string>
     <string name="pref_volume_wake_summary">Rauf o. Runter der Lautstärketaste weckt das Gerät</string>
 
@@ -155,7 +154,7 @@
     <string name="battery_around_lockscreen_ring">Batterie um Entriegelungsring</string>
 
     <!--  User Interface -->
-    <string name="user_interface_category_title">Xtra Oberfläche</string>
+    <string name="user_interface_category_title">Schnittstellen</string>
 
     <!-- Category title for Charging sounds (Power state change) specific Settings.
          [CHAR LIMIT=40] -->
@@ -174,10 +173,10 @@
 
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Aufwachen beim Anstecken</string>
-    <string name="wake_when_plugged_or_unplugged_summary">Bildschrim ein, wenn Ladegerät ein- oder ausgesteckt</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Bildschirm ein, wenn Ladegerät ein- oder ausgesteckt</string>
 	
     <!-- Powermenu Options -->
-    <string name="powermenu_title">Auswahl Stromschalter</string>
+    <string name="powermenu_title">Auswahl Powermenü</string>
     <string name="powermenu_prefs_always">Immer</string>
     <string name="powermenu_prefs_onlyunlocked">Nur wenn Entriegelt</string>
     <string name="powermenu_prefs_never">Niemals</string>
@@ -253,6 +252,7 @@
 	<string name="psx_header_advanced_keyboard_options">Erweiterte Tastaturoptionen</string>
 	<string name="psx_header_charging">Laden</string>
     
+	<string name="psx_category_extended_input">Erweiterte Eingabe</string>    
 	<string name="psx_category_volume_rocker">Lautstärketaste</string>
 	
 </resources>
