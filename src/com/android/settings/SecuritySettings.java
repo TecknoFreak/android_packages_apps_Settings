@@ -1,18 +1,18 @@
 /*
- * Copyright (C) 2007 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+* Copyright (C) 2007 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 
 package com.android.settings;
 
@@ -49,8 +49,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Gesture lock pattern settings.
- */
+* Gesture lock pattern settings.
+*/
 public class SecuritySettings extends RestrictedSettingsFragment
         implements OnPreferenceChangeListener, DialogInterface.OnClickListener {
     static final String TAG = "SecuritySettings";
@@ -67,7 +67,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_LOCK_AFTER_TIMEOUT = "lock_after_timeout";
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
     private static final String KEY_ENABLE_WIDGETS = "keyguard_enable_widgets";
-    private static final String KEY_SEE_TRHOUGH = "see_through";
 
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_WEAK_IMPROVE_REQUEST = 124;
@@ -106,7 +105,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private CheckBoxPreference mToggleVerifyApps;
     private CheckBoxPreference mPowerButtonInstantlyLocks;
     private CheckBoxPreference mEnableKeyguardWidgets;
-    private CheckBoxPreference mSeeThrough;
 
     private Preference mNotificationAccess;
 
@@ -205,9 +203,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
             setupLockAfterPreference();
             updateLockAfterPreferenceSummary();
         }
-
-        // lockscreen see through
-        mSeeThrough = (CheckBoxPreference) root.findPreference(KEY_SEE_TRHOUGH);
 
         // biometric weak liveliness
         mBiometricWeakLiveliness =
@@ -543,7 +538,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 lockPatternUtils.setBiometricWeakLivelinessEnabled(true);
             } else {
                 // In this case the user has just unchecked the checkbox, but this action requires
-                // them to confirm their password.  We need to re-check the checkbox until
+                // them to confirm their password. We need to re-check the checkbox until
                 // they've confirmed their password
                 mBiometricWeakLiveliness.setChecked(true);
                 ChooseLockSettingsHelper helper =
@@ -576,9 +571,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
             } else {
                 setNonMarketAppsAllowed(false);
             }
-        } else if (preference == mSeeThrough) {
-            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
-                    mSeeThrough.isChecked() ? 1 : 0);
         } else if (KEY_TOGGLE_VERIFY_APPLICATIONS.equals(key)) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.PACKAGE_VERIFIER_ENABLE,
                     mToggleVerifyApps.isChecked() ? 1 : 0);
@@ -595,8 +587,8 @@ public class SecuritySettings extends RestrictedSettingsFragment
     }
 
     /**
-     * see confirmPatternThenDisableAndClear
-     */
+* see confirmPatternThenDisableAndClear
+*/
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -609,7 +601,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
             final LockPatternUtils lockPatternUtils = mChooseLockSettingsHelper.utils();
             lockPatternUtils.setBiometricWeakLivelinessEnabled(false);
             // Setting the mBiometricWeakLiveliness checked value to false is handled when onResume
-            // is called by grabbing the value from lockPatternUtils.  We can't set it here
+            // is called by grabbing the value from lockPatternUtils. We can't set it here
             // because mBiometricWeakLiveliness could be null
             return;
         }

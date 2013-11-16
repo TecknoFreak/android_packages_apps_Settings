@@ -22,10 +22,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     // Omni Additions
     private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
     private static final String LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
+    private static final String KEY_SEE_TRHOUGH = "see_through";
 
     // Omni Additions
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMaximizeKeyguardWidgets;
+    private CheckBoxPreference mSeeThrough;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
         PreferenceScreen root = getPreferenceScreen();
 
         // Add the additional Omni settings
+        mSeeThrough = (CheckBoxPreference) root.findPreference(KEY_SEE_TRHOUGH);
         mLockRingBattery = (CheckBoxPreference) root
                 .findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
         if (mLockRingBattery != null) {
@@ -65,6 +68,9 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, isToggled(preference) ? 1 : 0);
 			return true;
+        } else if (preference == mSeeThrough) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
+                    mSeeThrough.isChecked() ? 1 : 0);
 		}
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
