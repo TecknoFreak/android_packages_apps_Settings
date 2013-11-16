@@ -64,14 +64,14 @@
     <!-- Bars -->
     <header
         android:id="@+id/psx_bars"
-        android:icon="@drawable/ic_settings_interface"
+        android:icon="@drawable/ic_settings_bars"
         android:fragment="com.android.settings.psx.BarsSettings"
         android:title="@string/psx_header_bars" />
 
     <!-- Buttons -->
     <header
         android:id="@+id/psx_buttons"
-        android:icon="@drawable/ic_settings_interface"
+        android:icon="@drawable/ic_settings_buttons"
         android:fragment="com.android.settings.psx.ButtonsSettings"
         android:title="@string/psx_header_buttons" />
 		
@@ -85,7 +85,7 @@
     <!-- Lockscreen -->
     <header
         android:id="@+id/lockscreen"
-        android:icon="@drawable/ic_settings_interface"
+        android:icon="@drawable/ic_settings_lockscreen"
         android:fragment="com.android.settings.psx.LockscreenSettings"
         android:title="@string/psx_header_lockscreen" />
 		
