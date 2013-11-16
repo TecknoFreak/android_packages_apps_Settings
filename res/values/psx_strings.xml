@@ -134,7 +134,7 @@
     <string name="volume_ring_only_description">Ringtone</string>
 
     <!-- Keyboard and Input ASS methods -->
-    <string name="title_keyboard_input">Advanced options</string>
+    <string name="title_keyboard_input">Keyboard options</string>
     <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
     <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>
