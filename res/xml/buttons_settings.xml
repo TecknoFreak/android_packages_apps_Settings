@@ -28,7 +28,7 @@
 
     <PreferenceCategory
         android:key="psx_category_volume_rocker"
-        android:title="@string/display_category_animation_options_title" >
+        android:title="@string/psx_category_volume_rocker" >
 
         <CheckBoxPreference
             android:key="pref_volume_wake"

@@ -58,16 +58,22 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
 		
         mLightOptions = (PreferenceCategory) prefSet.findPreference(KEY_LIGHT_OPTIONS);
         mNotificationPulse = (PreferenceScreen) findPreference(KEY_NOTIFICATION_PULSE);
-        mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
         if (mNotificationPulse != null) {
             if (!getResources().getBoolean(
                 com.android.internal.R.bool.config_intrusiveNotificationLed)) {
                 mLightOptions.removePreference(mNotificationPulse);
-                mLightOptions.removePreference(mBatteryPulse);
 				mNotificationPulse = null;
-				mLightOptions = null;
             } else {
                 updateLightPulseDescription();
+            }
+        }
+        mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
+        if (mBatteryPulse != null) {
+            if (!getResources().getBoolean(
+                com.android.internal.R.bool.config_showBatteryLedOption)) {
+                mLightOptions.removePreference(mBatteryPulse);
+				mBatteryPulse = null;
+            } else {
                 updateBatteryPulseDescription();
             }
         }
