@@ -258,11 +258,15 @@
     <!-- Text shown for title of settings checkbox to maximize widgets [CHAR LIMIT=20]-->
     <string name="security_maximize_widgets_title">Maximize lockscreen widgets</string>
 	
-     <!--Lockscreen See Through-->
-     <string name="see_through_title">See through</string>
-     <string name="see_through_summary">Shows the content behind your lockscreen, your data may be visible to those around you</string>
+    <!--Lockscreen See Through-->
+    <string name="see_through_title">See through</string>
+    <string name="see_through_summary">Shows the content behind your lockscreen, your data may be visible to those around you</string>
 
     <!-- Quick Unlock Pin -->
-     <string name="lockscreen_quick_unlock_control_title">Quick unlock</string>	 
-	 <string name="lockscreen_quick_unlock_control_summary">Quick unlock defines wether Enter is needed on pin or password panel or not</string>
+    <string name="lockscreen_quick_unlock_control_title">Quick unlock</string>	 
+    <string name="lockscreen_quick_unlock_control_summary">Quick unlock defines wether Enter is needed on pin or password panel or not</string>
+
+    <!--AppOps-->
+    <string name="appops_settings_title">App privacy</string>
+
 </resources>
