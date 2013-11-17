@@ -70,8 +70,7 @@
 
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
-            android:taskAffinity="com.android.settings"
-            android:parentActivity="Settings"
+            android:taskAffinity=""
             android:theme="@style/Theme.Settings"
             android:hardwareAccelerated="true"
             android:requiredForAllUsers="true"
@@ -798,13 +797,12 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.NotificationStation" />
         </activity>
-
-        <!--
+        
         <activity android:name="Settings$AppOpsSummaryActivity"
                 android:label="@string/app_ops_settings"
-                android:taskAffinity=""
+                android:taskAffinity="com.android.settings"
                 android:excludeFromRecents="true"
-                android:enabled="false">
+                android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.APP_OPS_SETTINGS" />
@@ -817,7 +815,6 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/application_settings" />
         </activity>
-        -->
 
         <activity android:name="Settings$LocationSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
