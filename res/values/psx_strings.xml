@@ -7,4 +7,7 @@
 	
 	<string name="ok">OK</string>
 
+    <!--AppOps-->
+    <string name="appops_settings_title">App privacy</string>
+
 </resources>
