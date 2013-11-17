@@ -23,11 +23,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
     private static final String LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
     private static final String KEY_SEE_TRHOUGH = "see_through";
-
+    private static final String KEY_LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control"; 
+   
     // Omni Additions
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMaximizeKeyguardWidgets;
     private CheckBoxPreference mSeeThrough;
+    private CheckBoxPreference mLockscreenQuickUnlockControl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
             mMaximizeKeyguardWidgets.setChecked(Settings.System.getInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, 0) == 1);
         }
-		
+        
+        //Quick Unlock        
+        mLockscreenQuickUnlockControl = (CheckBoxPreference) findPreference(KEY_LOCKSCREEN_QUICK_UNLOCK_CONTROL);
+        mLockscreenQuickUnlockControl.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.PSX_LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
+	
     }
 
     private boolean isToggled(Preference pref) {
@@ -71,7 +78,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
         } else if (preference == mSeeThrough) {
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
                     mSeeThrough.isChecked() ? 1 : 0);
-		}
+			return true;
+		} else if (preference == mLockscreenQuickUnlockControl) {
+            Settings.System.putInt(getContentResolver(), Settings.System.PSX_LOCKSCREEN_QUICK_UNLOCK_CONTROL,
+                    mSeeThrough.isChecked() ? 1 : 0);
+			return true;
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
