@@ -40,6 +40,8 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
 
         // Add the additional Omni settings
         mSeeThrough = (CheckBoxPreference) root.findPreference(KEY_SEE_TRHOUGH);
+        mSeeThrough.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1);
         mLockRingBattery = (CheckBoxPreference) root
                 .findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
         if (mLockRingBattery != null) {
