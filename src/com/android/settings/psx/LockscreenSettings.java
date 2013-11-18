@@ -81,7 +81,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
                     mSeeThrough.isChecked() ? 1 : 0);
 			return true;
-		} else if (preference == mLockscreenQuickUnlockControl) {
+	} else if (preference == mLockscreenQuickUnlockControl) {
             Settings.System.putInt(getContentResolver(), Settings.System.PSX_LOCKSCREEN_QUICK_UNLOCK_CONTROL,
                     mSeeThrough.isChecked() ? 1 : 0);
 			return true;
