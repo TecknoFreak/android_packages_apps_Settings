@@ -264,7 +264,7 @@
 
     <!-- Quick Unlock Pin -->
     <string name="lockscreen_quick_unlock_control_title">Quick unlock</string>	 
-    <string name="lockscreen_quick_unlock_control_summary">Quick unlock defines wether Enter is needed on pin or password panel or not</string>
+    <string name="lockscreen_quick_unlock_control_summary">Quick unlock defines whether enter is needed on pin or password panel or not</string>
 
     <!--AppOps-->
     <string name="appops_settings_title">App privacy</string>
