@@ -22,13 +22,11 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
     // Omni Additions
     private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
     private static final String LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
-    private static final String KEY_SEE_TRHOUGH = "see_through";
     private static final String KEY_LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control"; 
    
     // Omni Additions
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMaximizeKeyguardWidgets;
-    private CheckBoxPreference mSeeThrough;
     private CheckBoxPreference mLockscreenQuickUnlockControl;
 
     @Override
@@ -39,9 +37,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
         PreferenceScreen root = getPreferenceScreen();
 
         // Add the additional Omni settings
-        mSeeThrough = (CheckBoxPreference) root.findPreference(KEY_SEE_TRHOUGH);
-        mSeeThrough.setChecked(Settings.System.getInt(getContentResolver(),
-                    Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1);
         mLockRingBattery = (CheckBoxPreference) root
                 .findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
         if (mLockRingBattery != null) {
@@ -77,13 +72,9 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements On
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, isToggled(preference) ? 1 : 0);
 			return true;
-        } else if (preference == mSeeThrough) {
-            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
-                    mSeeThrough.isChecked() ? 1 : 0);
-			return true;
-	} else if (preference == mLockscreenQuickUnlockControl) {
+        } else if (preference == mLockscreenQuickUnlockControl) {
             Settings.System.putInt(getContentResolver(), Settings.System.PSX_LOCKSCREEN_QUICK_UNLOCK_CONTROL,
-                    mSeeThrough.isChecked() ? 1 : 0);
+                    mLockscreenQuickUnlockControl.isChecked() ? 1 : 0);
 			return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
