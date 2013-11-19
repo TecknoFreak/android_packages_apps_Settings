@@ -267,6 +267,10 @@
     <string name="lockscreen_quick_unlock_control_summary">Quick unlock defines whether Enter is needed on pin or password panel or not</string>
 
     <!--AppOps-->
-    <string name="appops_settings_title">App privacy</string>
+    <string name="appops_settings_title">App ops</string>
+
+    <!--Notification count-->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display number of pending notifications</string>
 
 </resources>
