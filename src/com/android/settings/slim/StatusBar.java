@@ -87,8 +87,9 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             return true;
         } else if (preference == mStatusBarNotifCount) {
             Settings.System.putInt(getContentResolver(),
-            Settings.System.STATUS_BAR_NOTIF_COUNT,
-            (Boolean) newValue ? 1 : 0);
+                    Settings.System.STATUS_BAR_NOTIF_COUNT,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
         }
         return false;
     }
