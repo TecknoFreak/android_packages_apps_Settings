@@ -32,8 +32,8 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
-import com.android.internal.util.psx.DeviceUtils;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -42,10 +42,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
+    private static final String STATUS_BAR_TRAFFIC = "status_bar_traffic";
 
     private PreferenceScreen mClockStyle;
     private CheckBoxPreference mStatusBarBrightnessControl;
     private CheckBoxPreference mStatusBarNotifCount;
+    private CheckBoxPreference mStatusBarTraffic;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,9 +79,15 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 Settings.System.STATUS_BAR_NOTIF_COUNT, 0) == 1));
         mStatusBarNotifCount.setOnPreferenceChangeListener(this);
 
+        mStatusBarTraffic =
+            (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_TRAFFIC);
+        mStatusBarTraffic.setChecked((Settings.System.getInt(getContentResolver(),
+            Settings.System.STATUS_BAR_TRAFFIC, 0) == 1));
+        mStatusBarTraffic.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        boolean value;
         if (preference == mStatusBarBrightnessControl) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
@@ -87,8 +95,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             return true;
         } else if (preference == mStatusBarNotifCount) {
             Settings.System.putInt(getContentResolver(),
-            Settings.System.STATUS_BAR_NOTIF_COUNT,
-            (Boolean) newValue ? 1 : 0);
+                    Settings.System.STATUS_BAR_NOTIF_COUNT,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mStatusBarTraffic) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_TRAFFIC,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
         }
         return false;
     }
