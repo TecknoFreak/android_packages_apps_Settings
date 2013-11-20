@@ -42,7 +42,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
-    private static final String STATUS_BAR_TRAFFIC = "status_bar_traffic";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
     private PreferenceScreen mClockStyle;
@@ -90,12 +89,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarNotifCount.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_NOTIF_COUNT, 0) == 1));
         mStatusBarNotifCount.setOnPreferenceChangeListener(this);
-
-        mStatusBarTraffic =
-            (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_TRAFFIC);
-        mStatusBarTraffic.setChecked((Settings.System.getInt(getContentResolver(),
-            Settings.System.STATUS_BAR_TRAFFIC, 0) == 1));
-        mStatusBarTraffic.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -109,12 +102,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                     Settings.System.STATUS_BAR_NOTIF_COUNT,
                     (Boolean) newValue ? 1 : 0);
             return true;
-        } else if (preference == mStatusBarTraffic) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_TRAFFIC,
-                    (Boolean) newValue ? 1 : 0);
-            return true;
-
         } else if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             int quickPulldownIndex = mQuickPulldown.findIndexOfValue((String) newValue);
