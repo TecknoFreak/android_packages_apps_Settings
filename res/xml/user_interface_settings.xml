@@ -24,7 +24,13 @@
 	    android:key="psx_charging"
         android:fragment="com.android.settings.psx.ChargingSettings"
         android:title="@string/psx_header_charging" />
-	
+
+    <!-- Display Rotation -->
+        <PreferenceScreen
+                android:key="display_rotation"
+                android:fragment="com.android.settings.psx.DisplayRotation"
+                android:title="@string/display_rotation_title" />		
+				
 	<!-- Animations -->
     <PreferenceCategory
         android:key="category_animation_options"

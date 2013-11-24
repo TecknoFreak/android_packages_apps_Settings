@@ -18,6 +18,12 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import android.preference.ListPreference;
 import android.preference.PreferenceCategory;
+import android.database.ContentObserver;
+import android.os.Handler;
+import com.android.settings.psx.DisplayRotation;
+import com.android.internal.view.RotationPolicy;
+
+import java.util.ArrayList;
 
 public class UserInterfaceSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -26,18 +32,42 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
     private static final String KEY_ANIMATION_OPTIONS = "category_animation_options";
+    private static final String KEY_DISPLAY_ROTATION = "display_rotation";
 
+	private static final String ROTATION_ANGLE_0 = "0";
+    private static final String ROTATION_ANGLE_90 = "90";
+    private static final String ROTATION_ANGLE_180 = "180";
+    private static final String ROTATION_ANGLE_270 = "270";
+	
     private ListPreference mCrtMode;
     private PreferenceCategory mLightOptions;
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
-
+    private PreferenceScreen mDisplayRotationPreference;
+	
+    private ContentObserver mAccelerometerRotationObserver = 
+            new ContentObserver(new Handler()) {
+        @Override
+        public void onChange(boolean selfChange) {
+            updateDisplayRotationPreferenceDescription();
+        }
+    };
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.user_interface_settings);
 		PreferenceScreen prefSet = getPreferenceScreen();
+
+        mDisplayRotationPreference = (PreferenceScreen) findPreference(KEY_DISPLAY_ROTATION);
+        if (!RotationPolicy.isRotationSupported(getActivity())
+                || RotationPolicy.isRotationLockToggleSupported(getActivity())) {
+            // If rotation lock is supported, then we do not provide this option in
+            // Display settings.  However, is still available in Accessibility settings,
+            // if the device supports rotation.
+            getPreferenceScreen().removePreference(mDisplayRotationPreference);
+        }
 
         // respect device default configuration
         // true fades while false animates
@@ -118,4 +148,63 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
         // TODO Auto-generated method stub
         return false;
     }
+	
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        getContentResolver().registerContentObserver(
+                Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION), true,
+                mAccelerometerRotationObserver);
+        updateDisplayRotationPreferenceDescription();
+    }	
+	
+    @Override
+    public void onPause() {
+        super.onPause();
+        getContentResolver().unregisterContentObserver(mAccelerometerRotationObserver);
+	}
+	
+    private void updateDisplayRotationPreferenceDescription() {
+        if (mDisplayRotationPreference == null) {
+            return;
+        }
+        PreferenceScreen preference = mDisplayRotationPreference;
+        StringBuilder summary = new StringBuilder();
+        Boolean rotationEnabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.ACCELEROMETER_ROTATION, 0) != 0;
+        int mode = Settings.System.getInt(getContentResolver(),
+            Settings.System.ACCELEROMETER_ROTATION_ANGLES,
+            DisplayRotation.ROTATION_0_MODE|DisplayRotation.ROTATION_90_MODE|DisplayRotation.ROTATION_270_MODE);
+
+        if (!rotationEnabled) {
+            summary.append(getString(R.string.display_rotation_disabled));
+        } else {
+            ArrayList<String> rotationList = new ArrayList<String>();
+            String delim = "";
+            if ((mode & DisplayRotation.ROTATION_0_MODE) != 0) {
+                rotationList.add(ROTATION_ANGLE_0);
+            }
+            if ((mode & DisplayRotation.ROTATION_90_MODE) != 0) {
+                rotationList.add(ROTATION_ANGLE_90);
+            }
+            if ((mode & DisplayRotation.ROTATION_180_MODE) != 0) {
+                rotationList.add(ROTATION_ANGLE_180);
+            }
+            if ((mode & DisplayRotation.ROTATION_270_MODE) != 0) {
+                rotationList.add(ROTATION_ANGLE_270);
+            }
+            for (int i = 0; i < rotationList.size(); i++) {
+                summary.append(delim).append(rotationList.get(i));
+                if ((rotationList.size() - i) > 2) {
+                    delim = ", ";
+                } else {
+                    delim = " & ";
+                }
+            }
+            summary.append(" " + getString(R.string.display_rotation_unit));
+        }
+        preference.setSummary(summary);
+    }
+	
 }
