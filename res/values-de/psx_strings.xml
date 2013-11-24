@@ -195,6 +195,9 @@
     <string name="powermenu_screenshot_prefs_summary">%1$s</string>	
     <string name="powermenu_torch_prefs_title">Taschenlampe</string>
     <string name="powermenu_torch_prefs_summary">%1$s</string>
+    <string name="expanded_desktop_disabled">Deaktiviert</string>
+    <string name="expanded_desktop_status_bar">Statusleiste sichtbar</string>
+    <string name="expanded_desktop_no_status_bar">Statusleiste versteckt</string>
 
    <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Batterie Symbol</string>
@@ -228,18 +231,171 @@
     
       <!-- Navigation Bar -->
     <string name="navigation_bar_title">Navigationsleiste</string>
+	
+    <!-- Navigation settings -->
+    <string name="navigation_settings_options_title">Navigations Optionen</string>
+    <string name="navigation_settings_title">Navigation</string>
 
-    <!-- Navigation Bar Height -->
-    <string name="navigation_bar_height">Höhe der Navigationsleiste</string>
-    <string name="navigation_bar_height_48">48dp (default)</string>
-    <string name="navigation_bar_height_44">44dp</string>
-    <string name="navigation_bar_height_40">40dp</string>
-    <string name="navigation_bar_height_36">36dp</string>
-    <string name="navigation_bar_height_32">32dp</string>
-    <string name="navigation_bar_height_28">28dp</string>
-    <string name="navigation_bar_height_24">24dp</string>
-    <string name="navigation_bar_height_20">20dp</string>
-    <string name="navigation_bar_height_0">0dp (Versteckt)</string>
+    <!-- Navigation bar -->
+    <string name="navigation_bar_size_42_dp_default">42 dp (Vorgabe)</string>
+    <string name="navigation_bar_size_36_dp">36 dp</string>
+    <string name="navigation_bar_size_30_dp">30 dp</string>
+    <string name="navigation_bar_size_24_dp">24 dp</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (Vorgabe)</string>
+    <string name="navigation_bar_size_44_dp">44 dp</string>
+    <string name="navigation_bar_size_40_dp">40 dp</string>
+    <string name="navigation_bar_size_42_dp">42 dp</string>
+    <string name="navigation_bar_size_0_dp">0 dp (Aus)</string>
+    <string name="navigation_menu_right">Rechts</string>
+    <string name="navigation_menu_left">Links</string>
+    <string name="navigation_menu_both">Beides</string>
+    <string name="navigation_menu_default_jb_behavior">Bei Bedarf (Vorgabe)</string>
+    <string name="navigation_menu_never_show">Niemals</string>
+    <string name="navigation_menu_always_show">Immer</string>
+    <string name="navigation_bar">Navigationsleiste</string>
+    <string name="navbar_button_cat">Navigationsleisten Schalter</string>
+    <string name="title_pref_menu_location">Menüposition</string>
+    <string name="summary_pref_menu_location">Wo soll der Menüschalter erscheinen?</string>
+    <string name="title_pref_menu_display">Menüsichtbarkeit</string>
+    <string name="summary_pref_menu_display">Wie und Wann soll der Menüschalter erscheinen?</string>
+    <string name="navbar_enable_bar">Aktiviere Navigationsleiste</string>
+    <string name="navbar_enable_bar_summary">Aktiviere Navigationsleiste</string>
+    <string name="navigation_bar_height_title">Höhe Navigationsleiste Portrait</string>
+    <string name="navigation_bar_height_summary">Höhe der Navigationsleiste während Portraitmodus.</string>
+    <string name="navigation_bar_height_landscape_title">Höhe Navigationsleiste Landscape</string>
+    <string name="navigation_bar_height_landscape_summary">Navigationsleistenhöhe während Landscapemodus.</string>
+    <string name="navigation_bar_width_title">Navigationsleistenbreite</string>
+    <string name="navigation_bar_width_summary">Höhe Navigationsleiste während an der Seite.</string>
+    <string name="navbar_can_move">Zeige Landscape</string>
+    <string name="navbar_can_move_summary">Zeige Navigationsleiste während Lanscape an der Unterseite</string>
+    <string name="navbar_style_dimen_title">Abmessungen</string>
+    <string name="navbar_button_title">Schalter</string>
+    <string name="navbar_targets_title">Ring Ziele</string>
+    <string name="navbar_cat">Navigationsleiste</string>
+    <string name="navbar_dimensions_reset_message">Alle Abmessungen zurücksetzen?</string>
+
+    <!-- Navigation bar button style -->
+    <string name="nav_bar_button_style_summary">Farbe der Navigationsleistenschalter ändern</string>
+    <string name="button_transparency_title">Durchsichtigkeit Schalter</string>
+    <string name="nav_button_color_mode_summary">Farbmodus ändern</string>
+    <string name="navigation_bar_glow_tint_title">Glühfarbe ändern</string>
+
+    <!-- Button shorcut actions -->
+    <string name="shortcut_action_app">Benutzer App</string>
+    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_back">Zurück</string>
+    <string name="shortcut_action_recent">Recents</string>
+    <string name="shortcut_action_lastapp">Letzte App</string>
+    <string name="shortcut_action_search">Suche</string>
+    <string name="shortcut_action_screenshot">Screenshot</string>
+    <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_ime">Öffne IME Wechsler</string>
+    <string name="shortcut_action_kill">Beende App</string>
+    <string name="shortcut_action_power">Bildschirm aus</string>
+    <string name="shortcut_action_notifications">Meldungen</string>
+    <string name="shortcut_action_qs">Quicksettings Panel</string>
+    <string name="shortcut_action_none">Keine</string>
+    <string name="shortcut_action_power_menu">Power Menü</string>
+    <string name="shortcut_action_torch">Taschenlampe</string>
+    <string name="shortcut_action_ring_vib">Klingeln/Vib</string>
+    <string name="shortcut_action_ring_silent">Klingeln/Ruhe</string>
+    <string name="shortcut_action_ring_vib_silent">Klingeln/Vib/Ruhe</string>
+    <string name="shortcut_action_longpress">Langer Druck:</string>
+    <string name="shortcut_action_select_action_longpress">Wähle Aktion bei langer Druck :</string>
+    <string name="shortcut_action_select_action">Wähle Aktion:</string>
+    <string name="shortcut_action_select_action_newbutton">Wähle neuen Schalter:</string>
+    <string name="shortcut_action_reset">Reset</string>
+    <string name="shortcut_action_add">Hinzu</string>
+    <string name="shortcut_action_reset_message">Alle Einstellungen zurücksetzen?</string>
+    <string name="shortcut_action_max">Maximalanzahl erreicht</string>
+    <string name="shortcut_action_warning">Warnung</string>
+    <string name="shortcut_action_warning_message">Letzter Eintrag kann nicht gelöscht werden</string>
+    <string name="shortcut_action_disable_message">Inaktiv\n Füge einen Eintrag hinzu zum aktivieren</string>
+    <string name="shortcut_image_not_valid">Die gewählte Anwendung liefert kein gültiges Icon. Benutze ein anderes App</string>
+    <string name="shortcut_duplicate_entry">Gewählte Aktion kann nicht zweimal aktiv sein</string>
+
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Schalter</string>
+    <string name="shortcut_action_help_icon">, während der Bildwahl werden Benutzeroptionen angezeigt</string>
+    <string name="shortcut_action_help_main">Um ein %1$s hinzuzufügen, wähle das Hinzu Icon.  Sobald %1$s hinzugeüfgt wurde, wird die Reihewahl %2$s die Auswahl ändern\n\nUm ein %1$s zu entfernen, Streiche Horizontal von Links nach Rechts über die Reihe.  Sorteire eine %1$s in der Liste durch Vertikales greifen des Ankers links um.\n\n Um auf Default zurückzusetzen, wähle das Reset Icon.</string>
+    <string name="shortcut_action_help_delete_last_entry">Entfernen aller %1$s in der List deaktiviert die Funktion komplett.</string>
+    <string name="shortcut_action_help">Hilfe</string>
+
+    <string name="icon_picker_type">Wähle Iconart:</string>
+    <string name="icon_default">Vorgabe</string>
+    <string name="icon_presets">System-Icons</string>
+
+    <string name="icon_custom">Gallerie</string>
+    <string name="shortcuts_icon_picker_alarm">Alarm</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Batterie</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Kalender</string>
+    <string name="shortcuts_icon_picker_camera">Kamera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Kontakt</string>
+    <string name="shortcuts_icon_picker_directdial">Direktwahl</string>
+    <string name="shortcuts_icon_picker_directmessage">Direktnachricht</string>
+    <string name="shortcuts_icon_picker_drive">Drive</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">Email</string>
+    <string name="shortcuts_icon_picker_email2">Email Alternative</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favoriten</string>
+    <string name="shortcuts_icon_picker_file_browser">Dateibrowser</string>
+    <string name="shortcuts_icon_picker_file_browser2">Dateibrowser Alternative</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Gallerie</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Hilfe</string>
+    <string name="shortcuts_icon_picker_joystick">Joystick</string>
+    <string name="shortcuts_icon_picker_key">Schlüssel/Accounts</string>
+    <string name="shortcuts_icon_picker_laptop">Laptop</string>
+    <string name="shortcuts_icon_picker_notes">Notes</string>
+    <string name="shortcuts_icon_picker_luggage">Travel</string>
+    <string name="shortcuts_icon_picker_maps">Maps</string>
+    <string name="shortcuts_icon_picker_market">Market</string>
+    <string name="shortcuts_icon_picker_movie">Filme</string>
+    <string name="shortcuts_icon_picker_music">Musik</string>
+    <string name="shortcuts_icon_picker_nav">Navigation</string>
+    <string name="shortcuts_icon_picker_phone">Phone</string>
+    <string name="shortcuts_icon_picker_package">Package</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Play</string>
+    <string name="shortcuts_icon_picker_pocket">Pocket</string>
+    <string name="shortcuts_icon_picker_quicksettings">Schnellauswahl</string>
+    <string name="shortcuts_icon_picker_rss">RSS Feed</string>
+    <string name="shortcuts_icon_picker_sdcard">SDCard</string>
+    <string name="shortcuts_icon_picker_search">Suche</string>
+    <string name="shortcuts_icon_picker_sms">Messaging</string>
+    <string name="shortcuts_icon_picker_tasks">Tasks</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Transit</string>
+    <string name="shortcuts_icon_picker_tv">TV</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Entsperren</string>
+
+    <string name="icon_color_mode_all_icons">Alle Icons</string>
+    <string name="icon_color_mode_system_icons">System Icons</string>
+    <string name="icon_color_mode_system_custom_icons">System und Benutzer Icons</string>
+    <string name="icon_picker_choose_icon_title">Wähle Icon</string>
+    <string name="group_applications">Anwendungen</string>
+    <string name="select_custom_app_title">Wähle Benutzeranwendung</string>
+    <string name="shortcuts_color_title">Verknüpfungsicon Farbe</string>
+    <string name="shortcuts_color_summary">Färbe die Verknüpfungsicons</string>
+    <string name="shortcuts_color_mode_title">Icon Farbmodus</string>
+    <string name="shortcuts_color_mode_summary">Ändere Farbmodus der Verknüpfungen</string>
+
+
+    <!-- Notification drawer settings  -->
+    <string name="notification_drawer_title">Meldungsbereich</string>
+    <string name="notification_hide_carrier_title">Verstecke Provider</string>
+    <string name="notification_shortcuts_settings_title">Verknüpfungen</string>
+    <string name="notification_shortcuts_settings_summary">Zeige Verknüpfungen im Meldungsbereich</string>
 	
 	<!-- Settings Header -->
 	<string name="psx_header_bars">Leisten</string>
@@ -265,7 +421,54 @@
     <!-- Quick Unlock Pin -->
     <string name="lockscreen_quick_unlock_control_title">Schnell entsperren</string>	
 	<string name="lockscreen_quick_unlock_control_summary">Schnell entsperren bestimmt, ob Enter bei Pin oder Password benötigt wird oder nicht</string>
-	
+
+    <!--AppOps-->
+    <string name="appops_settings_title">App ops</string>
+
+    <!--Notification count-->
+    <string name="status_bar_notif_count_title">Zeige Anzahl Meldungen</string>
+    <string name="status_bar_notif_count_summary">Zeige Anzahl offener Meldungen</string>
+
+    <!-- Network speed -->
+    <string name="show_network_speed">Netzwerk Geschwindigkeit</string>
+    <string name="show_network_speed_summary">Zeige die Netzwerkgeschwindigkeit in der Statusleiste</string>
+
+    <!-- Quick settings -->
+    <string name="quick_pulldown_title">Schnelleinstellungen pulldown</string>
+    <string name="quick_pulldown_summary">%1$s Ecke der Statusleiste zeight die Schnelleinstellungen herunter</string>
+    <string name="quick_pulldown_summary_left">Linke</string>
+    <string name="quick_pulldown_summary_right">Rechte</string>
+    <string name="quick_pulldown_off">Aus</string>
+    <string name="quick_pulldown_left">Links</string>
+    <string name="quick_pulldown_right">Rechts</string>
+
+    <!-- Network usage stats -->
+    <string name="status_bar_network_cat">Netzwerkleistung</string>
+    <string name="status_bar_network_header">Netzwerkleistung</string>
+    <string name="status_bar_network_title">Netzwerkleistung</string>
+    <string name="status_bar_show_network_stats_title">Zeige Netzleistung</string>
+    <string name="status_bar_network_stats_update_title">Aktualisierungsfreq.</string>
+
+    <!-- Network stats custm colors -->
+    <string name="status_bar_network_usage_color_style">Farbschema</string>
+    <string name="status_bar_network_usage_color_reset">Farben zurücks.</string>
+    <string name="status_bar_network_usage_color_reset_message">Farben zurücksetzen?</string> 
+  
+    <!-- Network stats hide if there's no traffic -->
+    <string name="hide_network_speed">Verstecken wenn kein Verkehr</string>
+    <string name="hide_network_speed_summary">Verstecke Leistungsdaten wenn kein Verkehr</string> 
+
+   <!-- Display : Rotation -->
+
+    <string name="display_rotation_title">Drehung</string>
+    <string name="display_rotation_disabled">Deaktiviert</string>
+    <string name="display_rotation_unit">Grad</string>
+    <string name="display_rotation_category_title">Drehmodus</string>
+    <string name="display_rotation_0_title">0 Grad</string>
+    <string name="display_rotation_90_title">90 Grad</string>
+    <string name="display_rotation_180_title">180 Grad</string>
+    <string name="display_rotation_270_title">270 Grad</string>	
+
 	
 </resources>
 
