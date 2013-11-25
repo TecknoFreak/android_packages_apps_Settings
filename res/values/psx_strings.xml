@@ -202,7 +202,7 @@
     <string name="summary_immersive_mode">%1$s</string>
     <string name="immersive_mode_summary_status_bar">With status bar</string>
     <string name="immersive_mode_summary_no_status_bar">Without status bar</string>
-    <string name="immersive_mode_disabled">Off</string>
+    <string name="immersive_mode_disabled">Never visible</string>
     <string name="immersive_mode_status_bar">With status bar</string>
     <string name="immersive_mode_no_status_bar">Without status bar</string>
 
