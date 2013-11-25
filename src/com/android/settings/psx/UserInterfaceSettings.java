@@ -33,8 +33,10 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
     private static final String KEY_BATTERY_LIGHT = "battery_light";
     private static final String KEY_ANIMATION_OPTIONS = "category_animation_options";
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
+    private static final String KEY_IMMERSIVE_MODE_STYLE = "immersive_mode_style";
+    private static final String KEY_IMMERSIVE_MODE_STATE = "immersive_mode_state";
 
-	private static final String ROTATION_ANGLE_0 = "0";
+    private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
     private static final String ROTATION_ANGLE_180 = "180";
     private static final String ROTATION_ANGLE_270 = "270";
@@ -44,6 +46,8 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
     private PreferenceScreen mDisplayRotationPreference;
+    private ListPreference mImmersiveModePref;
+    private CheckBoxPreference mImmersiveModeState;
 	
     private ContentObserver mAccelerometerRotationObserver = 
             new ContentObserver(new Handler()) {
@@ -107,7 +111,16 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
                 updateBatteryPulseDescription();
             }
         }
-		
+        mImmersiveModeState = (CheckBoxPreference) findPreference(KEY_IMMERSIVE_MODE_STATE);
+        mImmersiveModeState.setChecked(Settings.System.getInt(resolver, 
+                    Settings.System.GLOBAL_IMMERSIVE_MODE_STATE, 0) == 1);
+        mImmersiveModeState.setOnPreferenceChangeListener(this);        
+        
+        mImmersiveModePref = (ListPreference) prefSet.findPreference(KEY_IMMERSIVE_MODE_STYLE);
+        mImmersiveModePref.setOnPreferenceChangeListener(this);
+        int immersiveModeValue = Settings.System.getInt(getContentResolver(), Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, 0);
+        mImmersiveModePref.setValue(String.valueOf(immersiveModeValue));
+
     }
 
     private void updateLightPulseDescription() {
@@ -143,9 +156,19 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
                     Settings.System.SYSTEM_POWER_CRT_MODE,
                     value);
             mCrtMode.setSummary(mCrtMode.getEntries()[index]);
-			return true;
-        }
-        // TODO Auto-generated method stub
+	    return true;
+        } else if (preference == mImmersiveModePref) {
+            int immersiveModeValue = Integer.valueOf((String) objValue);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, immersiveModeValue);
+             updateImmersiveModeSummary(immersiveModeValue);
+             return true;
+        } else if (preference == mImmersiveModeState) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.GLOBAL_IMMERSIVE_MODE_STATE,
+                    (Boolean) objValue ? 1 : 0);
+            return true;
+        }        // TODO Auto-generated method stub
         return false;
     }
 	
@@ -206,5 +229,18 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
         }
         preference.setSummary(summary);
     }
-	
+
+    private void updateImmersiveModeSummary(int value) {
+        Resources res = getResources();
+        if (value == 0) {
+            /* expanded desktop deactivated */
+            mImmersiveModePref.setSummary(res.getString(R.string.immersive_mode_disabled));
+        } else if (value == 1) {
+            String statusBarPresent = res.getString(R.string.immersive_mode_summary_status_bar);
+            mImmersiveModePref.setSummary(res.getString(R.string.summary_immersive_mode, statusBarPresent));
+        } else if (value == 2) {
+            String statusBarPresent = res.getString(R.string.immersive_mode_summary_no_status_bar);
+            mImmersiveModePref.setSummary(res.getString(R.string.summary_immersive_mode, statusBarPresent));
+        }
+    }	
 }
