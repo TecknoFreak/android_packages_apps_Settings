@@ -120,13 +120,12 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
         mImmersiveModePref.setOnPreferenceChangeListener(this);
         int immersiveModeValue = Settings.System.getInt(getContentResolver(), Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, 0);
         mImmersiveModePref.setValue(String.valueOf(immersiveModeValue));
-        updateImmersiveModeState();
+        updateImmersiveModeState(immersiveModeValue);
+        updateImmersiveModeSummary(immersiveModeValue);
     }
     
-    private void updateImmersiveModeState() {
-        int immersiveModeValue = Settings.System.getInt(getContentResolver(), Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, 0);
-        mImmersiveModePref.setValue(String.valueOf(immersiveModeValue));
-	if (immersiveModeValue >=1) {
+    private void updateImmersiveModeState(int value) {
+	if (value >=1) {
 	   mImmersiveModeState.setEnabled(true);
         } else {
            mImmersiveModeState.setEnabled(false);	
@@ -172,7 +171,7 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, immersiveModeValue);
              updateImmersiveModeSummary(immersiveModeValue);
-             updateImmersiveModeState();
+             updateImmersiveModeState(immersiveModeValue);
              return true;
         } else if (preference == mImmersiveModeState) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
