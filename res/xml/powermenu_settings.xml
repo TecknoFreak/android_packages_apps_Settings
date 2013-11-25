@@ -64,7 +64,7 @@ limitations under the License.
         android:defaultValue="2" />
 
     <ListPreference
-        android:key="power_menu_immersive_mode"
+        android:key="powermenu_immersive_prefs"
         android:dialogTitle="@string/power_menu_immersive_mode"
         android:title="@string/power_menu_immersive_mode"
         android:entries="@array/entries_powermenu_visible_prefs"
