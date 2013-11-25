@@ -202,6 +202,11 @@
     <string name="immersive_mode_disabled">Deaktiviert</string>
     <string name="immersive_mode_status_bar">Mit Statusleiste</string>
     <string name="immersive_mode_no_status_bar">Ohne Statusleiste</string>
+    <string name="psx_category_immersive_mode">Immersive Modus</string>
+    <string name="immersive_mode_state">Aktiviere Modus</string>
+    <string name="immersive_mode_on">Immersive Modus aktiv</string>
+    <string name="immersive_mode_off">Immersive Modus inaktiv</string>
+    <string name="immersive_mode_style">Immersive Stil</string>
     
    <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Batterie Symbol</string>
