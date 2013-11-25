@@ -202,10 +202,15 @@
     <string name="summary_immersive_mode">%1$s</string>
     <string name="immersive_mode_summary_status_bar">With status bar</string>
     <string name="immersive_mode_summary_no_status_bar">Without status bar</string>
-    <string name="immersive_mode_disabled">Never visible</string>
+    <string name="immersive_mode_disabled">disabled</string>
     <string name="immersive_mode_status_bar">With status bar</string>
     <string name="immersive_mode_no_status_bar">Without status bar</string>
-
+    <string name="psx_category_immersive_mode">Immersive mode</string>
+    <string name="immersive_mode_state">Enable mode</string>
+    <string name="immersive_mode_on">Immersive mode enabled</string>
+    <string name="immersive_mode_off">Immersive mode disabled</string>
+    <string name="immersive_mode_style">Immersive style</string>
+    
     <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Battery icon</string>
     <string name="battery_status_icon">Icon</string>
