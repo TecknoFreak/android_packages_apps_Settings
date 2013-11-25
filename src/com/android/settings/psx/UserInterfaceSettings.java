@@ -22,7 +22,7 @@ import android.database.ContentObserver;
 import android.os.Handler;
 import com.android.settings.psx.DisplayRotation;
 import com.android.internal.view.RotationPolicy;
-
+import android.content.res.Resources;
 import java.util.ArrayList;
 
 public class UserInterfaceSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
@@ -112,7 +112,7 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
             }
         }
         mImmersiveModeState = (CheckBoxPreference) findPreference(KEY_IMMERSIVE_MODE_STATE);
-        mImmersiveModeState.setChecked(Settings.System.getInt(resolver, 
+        mImmersiveModeState.setChecked(Settings.System.getInt(getContentResolver(), 
                     Settings.System.GLOBAL_IMMERSIVE_MODE_STATE, 0) == 1);
         mImmersiveModeState.setOnPreferenceChangeListener(this);        
         
