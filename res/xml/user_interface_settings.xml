@@ -81,17 +81,16 @@
     <PreferenceCategory
        android:title="@string/psx_category_immersive_mode" >
     
-       <CheckBoxPreference android:key="immersive_mode_state"
-            android:title="@string/immersive_mode_state"
-            android:summaryOn="@string/immersive_mode_on"
-            android:summaryOff="@string/immersive_mode_off" />    
-       
        <ListPreference
             android:key="immersive_mode_style"
             android:title="@string/immersive_mode_style"
             android:entries="@array/immersive_mode_entries"
-            android:entryValues="@array/immersive_mode_values"   
-            android:dependency="immersive_mode_state" />
+            android:entryValues="@array/immersive_mode_values"/>
+
+       <CheckBoxPreference android:key="immersive_mode_state"
+            android:title="@string/immersive_mode_state"
+            android:summaryOn="@string/immersive_mode_on"
+            android:summaryOff="@string/immersive_mode_off" />    
 
     </PreferenceCategory>
 	
