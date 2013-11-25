@@ -42,7 +42,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
     private static final String KEY_POWERMENU_USERSWITCH_PREFS ="powermenu_userswitch_prefs";
     private static final String KEY_POWERMENU_SCREENSHOT_PREFS ="powermenu_screenshot_prefs";
     private static final String KEY_POWERMENU_TORCH_PREFS ="powermenu_torch_prefs";
-    private static final String KEY_IMMERSIVE_MODE = "power_menu_immersive_mode";
+    private static final String KEY_POWERMENU_IMMERSIVE_PREFS = "powermenu_immersive_prefs";
 
     private ListPreference mPowermenuRebootPrefs;
     private ListPreference mPowermenuShutdownPrefs;
@@ -62,10 +62,10 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
         PreferenceScreen prefSet = getPreferenceScreen();
 
         // Powermenu ImmersiveMode selection
-        mImmersiveModePref = (ListPreference) prefSet.findPreference(KEY_IMMERSIVE_MODE);
+        mImmersiveModePref = (ListPreference) prefSet.findPreference(KEY_POWERMENU_IMMERSIVE_PREFS);
         mImmersiveModePref.setOnPreferenceChangeListener(this);
         int ImmersiveModeValue = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                                 Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, 2);
+                                 Settings.System.POWERMENU_IMMERSIVE_PREFS, 2);
         mImmersiveModePref.setValue(String.valueOf(ImmersiveModeValue));
         updateImmersiveModeSummary(ImmersiveModeValue);
 
@@ -236,7 +236,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
         } else if (preference == mImmersiveModePref) {
             int ImmersiveModeValue = Integer.valueOf((String) objValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, ImmersiveModeValue);
+                    Settings.System.POWERMENU_IMMERSIVE_PREFS, ImmersiveModeValue);
             updateImmersiveModeSummary(ImmersiveModeValue);
             getActivity().recreate();
             return true;
