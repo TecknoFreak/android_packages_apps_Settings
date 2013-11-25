@@ -51,7 +51,7 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
     private ListPreference mPowermenuUserswitchPrefs;
     private ListPreference mPowermenuScreenshotPrefs;
     private ListPreference mPowermenuTorchPrefs;
-    ListPreference mImmersiveModePref;
+    private ListPreference mImmersiveModePref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,11 +61,13 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        // Powermenu ImmersiveMode selection
         mImmersiveModePref = (ListPreference) prefSet.findPreference(KEY_IMMERSIVE_MODE);
         mImmersiveModePref.setOnPreferenceChangeListener(this);
-        int expandedDesktopValue = Settings.System.getInt(getContentResolver(), Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, 0);
-        mImmersiveModePref.setValue(String.valueOf(expandedDesktopValue));
-        updateExpandedDesktopSummary(expandedDesktopValue);
+        int ImmersiveModeValue = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                                 Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, 2);
+        mImmersiveModePref.setValue(String.valueOf(ImmersiveModeValue));
+        updateImmersiveModeSummary(ImmersiveModeValue);
 
        // Powermenu Reboot selection
         mPowermenuRebootPrefs = (ListPreference) prefSet.findPreference(KEY_POWERMENU_REBOOT_PREFS);
@@ -177,6 +179,10 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
         mPowermenuTorchPrefs.setSummary(getPowerMenuString(value));
     }
     
+    private void updateImmersiveModeSummary(int value) {
+    	mImmersiveModePref.setSummary(getPowerMenuString(value));
+    }
+    
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mPowermenuRebootPrefs) {
             int mPowermenuRebootPrefsValue = Integer.valueOf((String) objValue);
@@ -228,34 +234,14 @@ public class PowermenuSettings extends SettingsPreferenceFragment implements OnP
             getActivity().recreate();
             return true;
         } else if (preference == mImmersiveModePref) {
-            int expandedDesktopValue = Integer.valueOf((String) objValue);
+            int ImmersiveModeValue = Integer.valueOf((String) objValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, expandedDesktopValue);
-            updateExpandedDesktopSummary(expandedDesktopValue);
+                    Settings.System.GLOBAL_IMMERSIVE_MODE_STYLE, ImmersiveModeValue);
+            updateImmersiveModeSummary(ImmersiveModeValue);
             getActivity().recreate();
             return true;
         }
         return false;
     }
 
-    private void updateExpandedDesktopSummary(int value) {
-        Resources res = getResources();
-
-        if (value == 0) {
-            /* expanded desktop deactivated */
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_GLOBAL_IMMERSIVE_MODE_ENABLED, 0);
-            mImmersiveModePref.setSummary(res.getString(R.string.immersive_mode_disabled));
-        } else if (value == 1) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_GLOBAL_IMMERSIVE_MODE_ENABLED, 1);
-            String statusBarPresent = res.getString(R.string.immersive_mode_summary_status_bar);
-            mImmersiveModePref.setSummary(res.getString(R.string.summary_immersive_mode, statusBarPresent));
-        } else if (value == 2) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.POWER_MENU_GLOBAL_IMMERSIVE_MODE_ENABLED, 1);
-            String statusBarPresent = res.getString(R.string.immersive_mode_summary_no_status_bar);
-            mImmersiveModePref.setSummary(res.getString(R.string.summary_immersive_mode, statusBarPresent));
-        }
-    }
 }
