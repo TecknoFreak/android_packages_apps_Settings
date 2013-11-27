@@ -93,5 +93,18 @@
             android:entryValues="@array/clear_recents_location_values"/>
 
     </PreferenceCategory>
-			
+		
+
+    <PreferenceCategory
+        android:title="@string/ad_settings_title">
+
+  <PreferenceScreen
+        android:key="active_display"
+        android:fragment="com.android.settings.psx.activedisplay.ActiveDisplaySettings"
+        android:title="@string/ad_settings_title"
+        android:summary="@string/ad_settings_summary">
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+	
 </PreferenceScreen>
