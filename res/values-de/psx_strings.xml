@@ -14,6 +14,11 @@
     <string name="attention">Achtung</string>
     <string name="enabled">Aktiv</string>
     <string name="default_string">Default</string>
+    <string name="additional_options_title">Zusätzliche Optionen</string>
+    <string name="reset_message">Alles auf Default zurücksetzen?</string>
+    <string name="style_title">Style</string>
+    <string name="profile_reset_title">Reset</string>
+    <string name="profile_applist_title">Apps</string>
 
     <!-- Settings main menu category heading. Rom (Launcher, Themes, System). [CHAR LIMIT=40] -->
     <string name="header_category_rom_settings">Xtra Einstellungen</string>
@@ -227,6 +232,7 @@
     <string name="battery_bolt_color">Farbe Ladeblitz</string>
     <string name="battery_text_charging_color">Farbe Prozent während des Ladens</string>
     <string name="battery_style_reset_message">Alle Batteriefarben zurücksetzen?</string>
+	<string name="battery_status_hide">Nichts</string>
 
     <!-- Display : Animation options -->
     <string name="display_category_animation_options_title">Animations Optionen</string>
@@ -320,19 +326,19 @@
     <string name="shortcut_action_warning">Warnung</string>
     <string name="shortcut_action_warning_message">Letzter Eintrag kann nicht gelöscht werden</string>
     <string name="shortcut_action_disable_message">Inaktiv\n Füge einen Eintrag hinzu zum aktivieren</string>
-    <string name="shortcut_image_not_valid">Die gewählte Anwendung liefert kein gültiges Icon. Benutze ein anderes App</string>
+    <string name="shortcut_image_not_valid">Die gewählte Anwendung liefert kein gültiges Bild. Benutze ein anderes App</string>
     <string name="shortcut_duplicate_entry">Gewählte Aktion kann nicht zweimal aktiv sein</string>
 
     <string name="shortcut_action_help_shortcut">Verknüpfung</string>
     <string name="shortcut_action_help_button">Schalter</string>
     <string name="shortcut_action_help_icon">, während der Bildwahl werden Benutzeroptionen angezeigt</string>
-    <string name="shortcut_action_help_main">Um ein %1$s hinzuzufügen, wähle das Hinzu Icon.  Sobald %1$s hinzugeüfgt wurde, wird die Reihewahl %2$s die Auswahl ändern\n\nUm ein %1$s zu entfernen, Streiche Horizontal von Links nach Rechts über die Reihe.  Sorteire eine %1$s in der Liste durch Vertikales greifen des Ankers links um.\n\n Um auf Default zurückzusetzen, wähle das Reset Icon.</string>
+    <string name="shortcut_action_help_main">Um ein %1$s hinzuzufügen, wähle das Hinzu Bild.  Sobald %1$s hinzugeüfgt wurde, wird die Reihewahl %2$s die Auswahl ändern\n\nUm ein %1$s zu entfernen, Streiche Horizontal von Links nach Rechts über die Reihe.  Sorteire eine %1$s in der Liste durch Vertikales greifen des Ankers links um.\n\n Um auf Default zurückzusetzen, wähle das Reset Bild.</string>
     <string name="shortcut_action_help_delete_last_entry">Entfernen aller %1$s in der List deaktiviert die Funktion komplett.</string>
     <string name="shortcut_action_help">Hilfe</string>
 
-    <string name="icon_picker_type">Wähle Iconart:</string>
+    <string name="icon_picker_type">Wähle Bildart:</string>
     <string name="icon_default">Vorgabe</string>
-    <string name="icon_presets">System-Icons</string>
+    <string name="icon_presets">System-Bilder</string>
 
     <string name="icon_custom">Gallerie</string>
     <string name="shortcuts_icon_picker_alarm">Alarm</string>
@@ -388,15 +394,15 @@
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Entsperren</string>
 
-    <string name="icon_color_mode_all_icons">Alle Icons</string>
-    <string name="icon_color_mode_system_icons">System Icons</string>
-    <string name="icon_color_mode_system_custom_icons">System und Benutzer Icons</string>
-    <string name="icon_picker_choose_icon_title">Wähle Icon</string>
+    <string name="icon_color_mode_all_icons">Alle Bilder</string>
+    <string name="icon_color_mode_system_icons">System Bilder</string>
+    <string name="icon_color_mode_system_custom_icons">System und Benutzer Bilder</string>
+    <string name="icon_picker_choose_icon_title">Wähle Bild</string>
     <string name="group_applications">Anwendungen</string>
     <string name="select_custom_app_title">Wähle Benutzeranwendung</string>
-    <string name="shortcuts_color_title">Verknüpfungsicon Farbe</string>
+    <string name="shortcuts_color_title">Verknüpfungsbild Farbe</string>
     <string name="shortcuts_color_summary">Färbe die Verknüpfungsicons</string>
-    <string name="shortcuts_color_mode_title">Icon Farbmodus</string>
+    <string name="shortcuts_color_mode_title">Bild Farbmodus</string>
     <string name="shortcuts_color_mode_summary">Ändere Farbmodus der Verknüpfungen</string>
 
 
@@ -478,6 +484,13 @@
     <string name="display_rotation_180_title">180 Grad</string>
     <string name="display_rotation_270_title">270 Grad</string>	
 
+    <!-- Basic Numbers -->
+    <string name="two">Zwei</string>
+    <string name="three">Drei</string>
+    <string name="four">Vier</string>
+    <string name="five">Fünf</string>
+    <string name="six">Sechs</string>
+	
     <!-- Quiet hours -->
     <string name="quiet_hours_title">Stille Stunden</string>
     <string name="quiet_hours_summary">Konfiguriere den Zeitraum, wo das Gerät ruhig sein soll</string>
@@ -504,10 +517,135 @@
     <string name="quiet_hours_haptic_off">Haptisches Feedback wie immer</string>
     <string name="quiet_hours_active_from">Aktiv von</string>
     <string name="quiet_hours_active_to">bis</string>
+    <string name="quiet_hours_auto_sms_group">Automatische Antwort</string>
+    <string name="quiet_hours_auto_sms_title">Eingehende Textnachrichten</string>
+    <string name="quiet_hours_auto_sms_call_title">Eingehende Anrufe</string>
+    <string name="quiet_hours_auto_string_title">Zu sendende Antwort</string>
+    <string name="quiet_hours_auto_string_explain">Diese Antwort wird automatisch versand wenn jemand in den stillen Stunden Kontakt aufnimmt.</string>
+    <string name="quiet_hours_auto_sms_null">[Automatische Antwort] Ich melde mich sobald ich kann.</string>
+    <string name="quiet_hours_auto_disabled">Inaktiv</string>
+    <string name="quiet_hours_auto_enabled">Alle Nummern</string>
+    <string name="quiet_hours_auto_contacts">Nur Kontakte</string>
+    <string name="quiet_hours_bypass_group">Umgehe stille Stunden</string>
+    <string name="quiet_hours_sms_code_null">[Alarm]</string>
+    <string name="quiet_hours_sms_bypass_title">SMS Umgehung</string>
+    <string name="quiet_hours_sms_code_title">SMS Schlüssel</string>
+    <string name="quiet_hours_sms_code_explain">Wenn eine eingehende Nachricht diesen Schlüssel enthält
+            ertönt ein Alarm</string>
+    <string name="quiet_hours_call_bypass_title">Anrufsumgehung</string>
+    <string name="quiet_hours_calls_required_title">Anzahl Anrufe in 30 Minuten</string>
+    <string name="quiet_hours_calls_required_summary">" Anrufe um Stille zu umgehen"</string>
+    <string name="quiet_hours_bypass_ringtone_title">Zu spielenden Klingelton</string>
+    <string name="quiet_hours_bypass_ringtone_loop_title">Klingelton wiederholung</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_on">Klingelt bis Annahme oder Abweisung</string>
+    <string name="quiet_hours_bypass_ringtone_loop_summary_off">Klingelton wird nur einmal gespielt</string>
+    <string name="quiet_hours_alarm_dismiss">Alarm beenden</string>
+    <string name="quiet_hours_alarm_and">" Und "</string>
+    <string name="quiet_hours_alarm_dialog_title">UMGEHUNG STILLE STUNDEN</string>
+    <string name="quiet_hours_alarm_message">" erfüllt die Anforderungen für die Umgehung!"</string>
 
     <!-- time range preference -->
     <string name="start_time_title">Start</string>
     <string name="end_time_title">Ende</string>
+
+    <!-- clear recents location -->
+    <string name="psx_clear_recents_category">Lösche Neuste Taste</string>
+    <string name="psx_clear_recents_location">Tastenposition</string>
+    <string name="crl_bottom_right">Rechts unten</string>
+	<string name="crl_top_right">Rechts oben</string>
+    <string name="crl_bottom_left">Links Unten</string>
+	<string name="crl_top_left">Links Oben</string>
+	
+    <!-- Active display settings -->
+    <string name="ad_settings_title">Aktive Anzeige</string>
+    <string name="ad_settings_summary">Ändere aktive Anzeige Einstellungen</string>
+    <string name="ad_enable_title">Aktivieren</string>
+    <string name="ad_enable_summary_on">Aktiv</string>
+    <string name="ad_enable_summary_off">Inaktiv</string>
+    <string name="ad_text_title">Meldungstext</string>
+    <string name="ad_text_summary">Zeige den Meldungstext um den Ring</string>
+    <string name="ad_all_notifications_title">Alle Meldungen</string>
+    <string name="ad_all_notifications_summary">Zeige alle Meldungen inklusive akuellen nicht Löschbaren.</string>
+    <string name="ad_hide_low_priority_title">Unterdrücke niedrige Prio</string>
+    <string name="ad_hide_low_priority_summary">Underdrücke niedrig Priorisierte wie Google Now.</string>
+    <string name="ad_pocket_mode_title">Taschenmodus</string>
+    <string name="ad_pocket_mode_summary">Zeige Aktive Anzeige Meldungen wenn das Gerät aus der Tasche genommen wird.</string>
+    <string name="ad_redisplay_title">Wiederholte Anzeige</string>
+    <string name="ad_timeout_title">Anzeige Timeout</string>
+    <string name="ad_brightness_title">Meldungshelligkeit</string>
+    <string name="ad_customizations_title">Anpassungen</string>
+    <string name="ad_excluded_apps_title">Ausgeschlossene Programme</string>
+    <string name="ad_excluded_apps_summary">Ausgeschlossene Programme werden nicht angezeigt.</string>
+    <string name="ad_show_date_title">Zeige Datum</string>
+    <string name="ad_show_ampm_title">Zeige AM/PM</string>
+    <string name="ad_sunlight_mode_title">Taglichtmodus</string>
+    <string name="ad_brightness_summary">Helligkeit für die Meldungen, wenn Automatische Helligkeit inaktiv.</string>
+    <string name="ad_show_date_summary">Zeige Datum über der Uhr</string>
+    <string name="ad_show_ampm_summary">Zeige AM/PM Anzeige beid er Zeit wenn 12h Format aktiv ist</string>
+    <string name="ad_sunlight_mode_summary">Invertiere Farben wenn in direkter Sonneneinstrahlung.</string>
+    <string name="ad_redisplay_never">Niemals</string>
+    <string name="ad_redisplay_1m">1 Minute</string>
+    <string name="ad_redisplay_5m">5 Minutes</string>
+    <string name="ad_redisplay_15m">15 Minutes</string>
+    <string name="ad_redisplay_30m">30 Minutes</string>
+    <string name="ad_redisplay_1h">1 Stunde</string>
+    <string name="ad_redisplay_2h">2 Stunden</string>
+    <string name="ad_redisplay_5h">5 Stunden</string>
+    <string name="ad_timeout_3s">3 Sekunden</string>
+    <string name="ad_timeout_5s">5 Sekunden</string>
+    <string name="ad_timeout_8s">8 Sekunden</string>
+    <string name="ad_timeout_10s">10 Sekunden</string>
+    <string name="ad_timeout_15s">15 Sekunden</string>
+    <string name="ad_timeout_25s">25 Sekunden</string>
+    <string name="ad_pocket_mode_off">Aus</string>
+    <string name="ad_pocket_mode_notifications">Nur Meldungen</string>
+    <string name="ad_pocket_mode_always">Immer</string>
+    <string name="bars_and_menus_category_recent_panel_title" >Anwendungen Menü</string>
+
+    <!-- Lock Screen Shortcuts -->
+    <string name="lockscreen_target_info">Bewege Gleiter zum Ziel um Anwendungen zuzuweisen</string>
+    <string name="lockscreen_target_title">Gleiter Anwendungen</string>
+    <string name="lockscreen_target_summary">Zeige oder Änder Anwender Sperrbildschirm-Anwendungen</string>
+    <string name="lockscreen_target_reset">Sperrschirm Anwendungen zurücksetzen</string>
+    <string name="lockscreen_target_save">Sperrschrim Anwendungen gespeichert</string>
+    <string name="lockscreen_target_reset_title">Reset</string>
+    <string name="lockscreen_target_reset_message">Entferne alle Benutzererstellten Anwendungen und auf Ausgang zurücksetzen?</string>
+    <string name="lockscreen_target_empty">Leer</string>
+    <string name="lockscreen_target_edit_title">Editiere Anwendung und Bild</string>
+    <string name="lockscreen_target_edit_msg">Wähle oder Ändere gewünschte Anwendung oder Aktion und das verbundene Bild</string>
+    <string name="lockscreen_target_toggle_ringer">Klingeln umschalten</string>
+
+    <!-- Lock screen shortcuts -->
+    <string name="picker_activities">Aktivitäten</string>
+    <string name="select_custom_activity_title">Wähle Benutzerdef. Aktivität</string>
+    <string name="icon_picker_alarm">Alarm</string>
+    <string name="icon_picker_browser">Browser</string>
+    <string name="icon_picker_calendar">Kalender</string>
+    <string name="icon_picker_camera">Kamera</string>
+    <string name="icon_picker_chrome">Chrome</string>
+    <string name="icon_picker_email">Email</string>
+    <string name="icon_picker_email2">Email Holo</string>
+    <string name="icon_picker_facebook">Facebook</string>
+    <string name="icon_picker_gallery">Gallerie</string>
+    <string name="icon_picker_google_small">Google (small)</string>
+    <string name="icon_picker_googleplus">Google Plus</string>
+    <string name="icon_picker_googletalk">Google Talk</string>
+    <string name="icon_picker_maps">Maps</string>
+    <string name="icon_picker_movie">Filme</string>
+    <string name="icon_picker_music">Musik</string>
+    <string name="icon_picker_nav_normal">Navigation</string>
+    <string name="icon_picker_phone">Phone</string>
+    <string name="icon_picker_podcast">Podcast</string>
+    <string name="icon_picker_rss">Rss</string>
+    <string name="icon_picker_search">Suche</string>
+    <string name="icon_picker_sms">Messaging</string>
+    <string name="icon_picker_twitter">Twitter</string>
+
+    <!-- String for IconPicker -->
+    <string name="icon_picker_title">Wähle Bildquelle</string>
+    <string name="icon_picker_system_icons_title">Systembilder</string>
+    <string name="icon_picker_gallery_title">Gallerie</string>
+    <string name="icon_picker_pack_title">Bilder-Pack</string>
 	
 </resources>
 

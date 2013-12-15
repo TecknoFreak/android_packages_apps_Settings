@@ -215,7 +215,8 @@
     <string name="battery_bolt_color">Bolt charging color</string>
     <string name="battery_text_charging_color">Percentage text charging color</string>
     <string name="battery_style_reset_message">Reset all battery colors?</string>
-
+	<string name="battery_status_hide">Hide battery</string>
+	
     <!-- Display : Animation options -->
     <string name="display_category_animation_options_title">Animation options</string>
     <string name="system_power_crt_mode_title">CRT animation </string>
