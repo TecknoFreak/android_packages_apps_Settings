@@ -452,6 +452,7 @@
         <item>@string/shortcut_action_lastapp</item>
         <item>@string/shortcut_action_notifications</item>
         <item>@string/shortcut_action_ime</item>
+        <item>@string/shortcut_action_immersive_mode</item>
         <item>@string/shortcut_action_power_menu</item>
         <item>@string/shortcut_action_qs</item>
         <item>@string/shortcut_action_recent</item>
@@ -470,6 +471,7 @@
         <item>**lastapp**</item>
         <item>**notifications**</item>
         <item>**ime**</item>
+        <item>**immersive_mode**</item>
         <item>**power_menu**</item>
         <item>**quicksettings**</item>
         <item>**recents**</item>
@@ -487,6 +489,7 @@
         <item>@string/shortcut_action_lastapp</item>
         <item>@string/shortcut_action_notifications</item>
         <item>@string/shortcut_action_ime</item>
+        <item>@string/shortcut_action_immersive_mode</item>
         <item>@string/shortcut_action_power_menu</item>
         <item>@string/shortcut_action_qs</item>
         <item>@string/shortcut_action_ring_silent</item>
@@ -505,6 +508,7 @@
         <item>**lastapp**</item>
         <item>**notifications**</item>
         <item>**ime**</item>
+        <item>**immersive_mode**</item>
         <item>**power_menu**</item>
         <item>**quicksettings**</item>
         <item>**ring_silent**</item>
@@ -701,4 +705,5 @@
     </string-array>
 
 </resources>
+
 
