@@ -67,13 +67,6 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
 		PreferenceScreen prefSet = getPreferenceScreen();
 
         mDisplayRotationPreference = (PreferenceScreen) findPreference(KEY_DISPLAY_ROTATION);
-        if (!RotationPolicy.isRotationSupported(getActivity())
-                || RotationPolicy.isRotationLockToggleSupported(getActivity())) {
-            // If rotation lock is supported, then we do not provide this option in
-            // Display settings.  However, is still available in Accessibility settings,
-            // if the device supports rotation.
-            getPreferenceScreen().removePreference(mDisplayRotationPreference);
-        }
 
         // respect device default configuration
         // true fades while false animates
@@ -130,6 +123,9 @@ public class UserInterfaceSettings extends SettingsPreferenceFragment implements
         int LocationValue = Settings.System.getInt(getContentResolver(), Settings.System.CLEAR_ALL_LAYOUT, 0);
         mClearRecentsLocation.setValue(String.valueOf(LocationValue));
         updateClearRecentsLocation(LocationValue);
+
+        mDisplayRotationPreference = (PreferenceScreen) findPreference(KEY_DISPLAY_ROTATION);
+
     }
     
     private void updateImmersiveModeState(int value) {
