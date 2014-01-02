@@ -64,7 +64,7 @@
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false" />
 
-        <com.android.settings.mahdi.SystemSettingCheckBoxPreference
+        <com.android.settings.psx.SystemSettingCheckBoxPreference
             android:key="double_tap_sleep_gesture"
             android:title="@string/double_tap_to_sleep"
             android:summary="@string/double_tap_to_sleep_summary"
