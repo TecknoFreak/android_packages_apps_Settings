@@ -58,6 +58,18 @@
         android:fragment="com.android.settings.WirelessSettings"
         android:icon="@drawable/empty_icon" />
 
+    <!-- Additional controls -->
+    <header android:title="@string/header_category_rom_settings" />
+
+    <!-- PSX Xtras -->
+    <header
+        android:id="@+id/interface_userinterface"
+        android:title="@string/psx_header_interface"
+        android:breadCrumbTitle="@string/psx_header_interface"
+        android:fragment="net.purespeedx.psxxtras.UserInterfaceSettings"
+        android:icon="@drawable/ic_settings_interface" />
+
+	
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
