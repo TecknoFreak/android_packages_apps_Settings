@@ -69,6 +69,14 @@
         android:fragment="net.purespeedx.psxxtras.UserInterfaceSettings"
         android:icon="@drawable/ic_settings_interface" />
 
+    <!-- Bars -->
+    <header
+        android:id="@+id/psx_bars"
+        android:icon="@drawable/ic_settings_bars"
+        android:fragment="net.purespeedx.psxxtras.BarsSettings"
+        android:title="@string/psx_header_bars" 
+        android:breadCrumbTitle="@string/psx_header_bars" />
+		
 	
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
