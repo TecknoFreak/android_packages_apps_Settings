@@ -1120,6 +1120,5 @@ public class Settings extends PreferenceActivity
 	public static class BarsSettingsActivity extends Settings { /* empty */ }
 	public static class ButtonsSettingsActivity extends Settings { /* empty */ }
 	public static class LockscreenSettingsActivity extends Settings { /* empty */ }
-	public static class UserInterfaceActivity extends Settings { /* empty */ }
-	public static class BarsActivity extends Settings { /* empty */ }
+	public static class PsxHeaderActivity extends Settings { /* empty */ }
 }

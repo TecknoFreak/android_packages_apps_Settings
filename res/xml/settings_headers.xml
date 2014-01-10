@@ -63,20 +63,12 @@
 
     <!-- PSX Xtras -->
     <header
-        android:id="@+id/interface_userinterface"
-        android:title="@string/psx_header_interface"
-        android:breadCrumbTitle="@string/psx_header_interface"
-        android:fragment="net.purespeedx.psxxtras.UserInterfaceSettings"
-        android:icon="@drawable/ic_settings_interface" />
+        android:id="@+id/psx_header"
+        android:title="@string/header_category_rom_settings"
+        android:breadCrumbTitle="@string/header_category_rom_settings"
+        android:fragment="net.purespeedx.psxxtras.PsxHeader"
+        android:icon="@drawable/psx_header_logo" />
 
-    <!-- Bars -->
-    <header
-        android:id="@+id/psx_bars"
-        android:icon="@drawable/ic_settings_bars"
-        android:fragment="net.purespeedx.psxxtras.BarsSettings"
-        android:title="@string/psx_header_bars" 
-        android:breadCrumbTitle="@string/psx_header_bars" />
-		
 	
     <!-- DEVICE -->
     <header android:id="@+id/device_section"

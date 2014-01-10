@@ -1738,8 +1738,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="Settings$UserInterfaceActivity"
-                android:label="@string/psx_header_interface"
+        <activity android:name="Settings$PsxHeaderActivity"
+                android:label="@string/header_category_rom_settings"
                 android:taskAffinity=""
                 android:excludeFromRecents="true">
             <intent-filter>
@@ -1748,24 +1748,9 @@
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="net.purespeedx.psxxtras.UserInterfaceSettings" />
+                android:value="net.purespeedx.psxxtras.PsxHeader" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/interface_userinterface" />
-        </activity>		
-
-        <activity android:name="Settings$BarsActivity"
-                android:label="@string/psx_header_bars"
-                android:taskAffinity=""
-                android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.android.settings.SHORTCUT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="net.purespeedx.psxxtras.BarsSettings" />
-            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/psx_bars" />
+                android:resource="@id/psx_header" />
         </activity>		
 		
         <receiver android:name=".widget.SettingsAppWidgetProvider"
