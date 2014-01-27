@@ -10,4 +10,37 @@
     <!--AppOps-->
     <string name="appops_settings_title">App privacy</string>
 
+	<!-- Default strings not defined in original Settings -->
+	
+	<string name="category_printers">Printers</string>
+	<string name="cell_broadcast_settings_summary">Cell broadcast...</string>
+	<string name="experimental_webview">Experimental Webview</string>
+	<string name="experimental_webview_summary">this Webview is experimental...</string>
+	<string name="location_category_app_settings">App settings</string>
+	<string name="nfc_payment_ask">Should I pay via NFC?</string>
+	<string name="print_services_title">Print service</string>
+	<string name="process_stats_ram_use">Ram use</string>
+	<string name="wifi_display_autonomous_go">Filler only</string>
+	<string name="wifi_display_available_devices">Available devices</string>
+	<string name="wifi_display_certification_heading">Certification</string>
+	<string name="wifi_display_disconnect_text">Disconnect device</string>
+	<string name="wifi_display_disconnect_title">Disconnect</string>
+	<string name="wifi_display_listen_channel">Listen channel</string>
+	<string name="wifi_display_listen_mode">Listen mode</string>
+	<string name="wifi_display_paired_devices">Paired devices</string>
+	<string name="wifi_display_pause">Pause</string>
+	<string name="wifi_display_resume">Resume</string>
+	<string name="wifi_display_search_for_devices">Search</string>
+	<string name="wifi_display_searching_for_devices">Searching for devices</string>
+	<string name="wifi_display_session_info">Session info</string>
+	<string name="wifi_display_settings_empty_list_wifi_display_disabled">disabled</string>
+	<string name="wifi_display_settings_empty_list_wifi_display_off">off</string>
+	<string name="wifi_display_status_available">Available</string>
+	<string name="wifi_display_summary_disabled">disabled</string>
+	<string name="wifi_display_summary_off">off</string>
+	<string name="wifi_display_summary_on">on</string>
+	<string name="wifi_display_wps_config">WPS config</string>
+	<string name="wimax_settings_summary">Summary</string>
+	
+	
 </resources>
